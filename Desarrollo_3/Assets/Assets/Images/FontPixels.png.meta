@@ -2,33 +2,33 @@ fileFormatVersion: 2
 guid: 7c4313a9db258e24eb37e794058912bd
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FontPixels_0
-    21300002: FontPixels_1
-    21300004: FontPixels_2
-    21300006: FontPixels_3
-    21300008: FontPixels_4
-    21300010: FontPixels_5
-    21300012: FontPixels_6
-    21300014: FontPixels_7
-    21300016: FontPixels_8
-    21300018: FontPixels_9
-    21300020: FontPixels_10
-    21300022: FontPixels_11
-    21300024: FontPixels_12
-    21300026: FontPixels_13
-    21300028: FontPixels_14
-    21300030: FontPixels_15
-    21300032: FontPixels_16
-    21300034: FontPixels_17
+    21300000: A
+    21300002: B
+    21300004: C
+    21300006: D
+    21300008: E
+    21300010: F
+    21300012: G
+    21300014: H
+    21300016: I
+    21300018: J
+    21300020: K
+    21300022: L
+    21300024: M
+    21300026: N
+    21300028: O
+    21300030: P
+    21300032: Q
+    21300034: R
     21300036: FontPixels_18
-    21300038: FontPixels_19
-    21300040: FontPixels_20
-    21300042: FontPixels_21
-    21300044: FontPixels_22
-    21300046: FontPixels_23
-    21300048: FontPixels_24
-    21300050: FontPixels_25
-    21300052: FontPixels_26
+    21300038: S
+    21300040: T
+    21300042: U
+    21300044: V
+    21300046: W
+    21300048: X
+    21300050: Y
+    21300052: Z
     21300054: FontPixels_27
   externalObjects: {}
   serializedVersion: 7
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FontPixels_0
+      name: A
       rect:
         serializedVersion: 2
         x: 9
@@ -131,7 +131,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,7 +143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_1
+      name: B
       rect:
         serializedVersion: 2
         x: 60
@@ -151,7 +151,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,7 +163,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_2
+      name: C
       rect:
         serializedVersion: 2
         x: 111
@@ -171,7 +171,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,7 +183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_3
+      name: D
       rect:
         serializedVersion: 2
         x: 162
@@ -191,7 +191,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_4
+      name: E
       rect:
         serializedVersion: 2
         x: 213
@@ -211,7 +211,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_5
+      name: F
       rect:
         serializedVersion: 2
         x: 264
@@ -231,7 +231,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_6
+      name: G
       rect:
         serializedVersion: 2
         x: 315
@@ -251,7 +251,7 @@ TextureImporter:
         width: 48
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,7 +263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_7
+      name: H
       rect:
         serializedVersion: 2
         x: 366
@@ -271,7 +271,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_8
+      name: I
       rect:
         serializedVersion: 2
         x: 417
@@ -291,7 +291,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,7 +303,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_9
+      name: J
       rect:
         serializedVersion: 2
         x: 9
@@ -311,7 +311,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,7 +323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_10
+      name: K
       rect:
         serializedVersion: 2
         x: 60
@@ -331,7 +331,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,7 +343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_11
+      name: L
       rect:
         serializedVersion: 2
         x: 111
@@ -351,7 +351,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -363,7 +363,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_12
+      name: M
       rect:
         serializedVersion: 2
         x: 162
@@ -371,7 +371,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_13
+      name: N
       rect:
         serializedVersion: 2
         x: 213
@@ -391,7 +391,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -403,7 +403,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_14
+      name: O
       rect:
         serializedVersion: 2
         x: 264
@@ -411,7 +411,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -423,7 +423,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_15
+      name: P
       rect:
         serializedVersion: 2
         x: 315
@@ -431,7 +431,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_16
+      name: Q
       rect:
         serializedVersion: 2
         x: 366
@@ -451,7 +451,7 @@ TextureImporter:
         width: 48
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -463,7 +463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_17
+      name: R
       rect:
         serializedVersion: 2
         x: 417
@@ -471,7 +471,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -491,7 +491,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -503,7 +503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_19
+      name: S
       rect:
         serializedVersion: 2
         x: 9
@@ -511,7 +511,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -523,7 +523,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_20
+      name: T
       rect:
         serializedVersion: 2
         x: 60
@@ -531,7 +531,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -543,7 +543,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_21
+      name: U
       rect:
         serializedVersion: 2
         x: 111
@@ -551,7 +551,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -563,7 +563,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_22
+      name: V
       rect:
         serializedVersion: 2
         x: 162
@@ -571,7 +571,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -583,7 +583,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_23
+      name: W
       rect:
         serializedVersion: 2
         x: 213
@@ -591,7 +591,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -603,7 +603,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_24
+      name: X
       rect:
         serializedVersion: 2
         x: 264
@@ -611,7 +611,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -623,7 +623,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_25
+      name: Y
       rect:
         serializedVersion: 2
         x: 315
@@ -631,7 +631,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -643,7 +643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FontPixels_26
+      name: Z
       rect:
         serializedVersion: 2
         x: 366
@@ -651,7 +651,7 @@ TextureImporter:
         width: 48
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -671,7 +671,7 @@ TextureImporter:
         width: 30
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
