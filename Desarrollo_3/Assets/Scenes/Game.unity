@@ -330,6 +330,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114880053737589778, guid: 1719f6bda1b268341a2cf632b2016c34,
+        type: 2}
+      propertyPath: MyStrg
+      value: ASRLTD
+      objectReference: {fileID: 0}
+    - target: {fileID: 114880053737589778, guid: 1719f6bda1b268341a2cf632b2016c34,
+        type: 2}
+      propertyPath: Palabra
+      value: 
+      objectReference: {fileID: 1449384095707676, guid: cb984ec040051d1429ae834323f9611c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1719f6bda1b268341a2cf632b2016c34, type: 2}
   m_IsPrefabAsset: 0
