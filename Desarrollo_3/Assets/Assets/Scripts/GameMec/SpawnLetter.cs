@@ -6,10 +6,9 @@ public class SpawnLetter : MonoBehaviour {
     [SerializeField] GameObject prefab;
     [SerializeField] GameObject Palabra;
     [SerializeField] Sprite[] Sprites;
-    [SerializeField] string MyStrg;
-    char[] StrgToChar;
+    private char[] StrgToChar;
 
-    public void MakeSprite() {
+    public void MakeSprite(string MyStrg) {
         string UpperSTR = MyStrg.ToUpper();
         
         StrgToChar = UpperSTR.ToCharArray();
