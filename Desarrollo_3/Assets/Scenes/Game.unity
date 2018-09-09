@@ -1000,8 +1000,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f560316c20c66e34eb0b642cd5c1f427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1350378572601198, guid: 469c9fd415fe4f541b8e42b1eab79877, type: 2}
-  Palabra: {fileID: 1449384095707676, guid: cb984ec040051d1429ae834323f9611c, type: 2}
+  offsetx: -1
+  Letra: {fileID: 1350378572601198, guid: 469c9fd415fe4f541b8e42b1eab79877, type: 2}
+  Roca: {fileID: 1391671524720384, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
   Sprites:
   - {fileID: 21300000, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
   - {fileID: 21300002, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
@@ -1487,7 +1488,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300002, guid: 4a1a669b4d17aee4da4c3bd9e60995aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnLetter : MonoBehaviour {
-    [SerializeField] GameObject prefab;
-    [SerializeField] GameObject Palabra;
+    [SerializeField] int offsetx;
+    [SerializeField] GameObject Letra;
+    [SerializeField] GameObject Roca;
     [SerializeField] Sprite[] Sprites;
     private char[] StrgToChar;
 
@@ -12,7 +13,7 @@ public class SpawnLetter : MonoBehaviour {
         string UpperSTR = MyStrg.ToUpper();
         
         StrgToChar = UpperSTR.ToCharArray();
-        GameObject String = Instantiate(Palabra);
+        GameObject String = Instantiate(Roca);
         String.name = MyStrg;
 
         for (int i = 0; i < StrgToChar.Length; i++) {
@@ -33,11 +34,13 @@ public class SpawnLetter : MonoBehaviour {
         {
             if (Sprites[i].name == Letter.ToString()) {
                 Vector3 posicion=new Vector3();
-                posicion.x = Sprites[i].bounds.size.x*pos;
-                GameObject Character = Instantiate(prefab,Padre);
+                posicion.x = (Sprites[i].bounds.size.x*pos)+offsetx;
+                GameObject Character = Instantiate(Letra,Padre);
                 Character.transform.position = posicion;
                 Character.name = Sprites[i].name;
+                Character.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 Character.GetComponent<SpriteRenderer>().sprite = Sprites[i];
+                
                 return true;
             }
             

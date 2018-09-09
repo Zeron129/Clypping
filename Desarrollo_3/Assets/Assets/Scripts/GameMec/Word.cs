@@ -4,7 +4,9 @@ using UnityEngine;
 [System.Serializable]
 public class Word {
     public string word;
+    public bool touched;
     private int typeIndex;
+
 
     public Word(string _word) {
         word = _word;
@@ -22,6 +24,10 @@ public class Word {
     public bool WordTyped() {
         bool wordTyped = (typeIndex >= word.Length);
         return wordTyped;
+    }
+
+    public void TouchedBy(bool touch) {
+        touched = touch;
     }
     
 }

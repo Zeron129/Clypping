@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RagdollControl : MonoBehaviour {
+
     [SerializeField] Transform LeftHand;
     [SerializeField] Transform RightHand;
     [SerializeField] float smoothfloat;
