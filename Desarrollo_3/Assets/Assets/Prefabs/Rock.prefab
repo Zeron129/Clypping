@@ -20,9 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4758820453618592}
   - component: {fileID: 212495058776215140}
+  - component: {fileID: 114262632124346818}
+  - component: {fileID: 58778814009457326}
   m_Layer: 0
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: stones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,12 +36,69 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1391671524720384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.0573149, y: 10.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58778814009457326
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1391671524720384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.24, y: -0.18}
+  serializedVersion: 2
+  m_Radius: 1
+--- !u!114 &114262632124346818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1391671524720384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f560316c20c66e34eb0b642cd5c1f427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetx: -1
+  Letra: {fileID: 1350378572601198, guid: 469c9fd415fe4f541b8e42b1eab79877, type: 2}
+  Sprites:
+  - {fileID: 21300000, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300002, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300004, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300006, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300008, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300010, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300012, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300014, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300016, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300018, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300020, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300022, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300024, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300026, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300028, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300030, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300032, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300034, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300036, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300038, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300040, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300042, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300044, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300046, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300048, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300050, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300052, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
+  - {fileID: 21300054, guid: 7c4313a9db258e24eb37e794058912bd, type: 3}
 --- !u!212 &212495058776215140
 SpriteRenderer:
   m_ObjectHideFlags: 1
