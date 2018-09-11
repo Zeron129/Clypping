@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 419592354}
   - component: {fileID: 419592353}
   - component: {fileID: 419592352}
-  - component: {fileID: 419592356}
   m_Layer: 0
   m_Name: Head
   m_TagString: ragdoll
@@ -326,21 +325,6 @@ Transform:
   m_Father: {fileID: 929956721}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &419592356
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 419592351}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &525316266
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +621,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929956720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.49215344, y: 5.294471, z: -1.0390625}
+  m_LocalPosition: {x: -0.49215344, y: 9.44, z: -1.0390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2018040519}
@@ -660,7 +644,6 @@ GameObject:
   - component: {fileID: 931128828}
   - component: {fileID: 931128827}
   - component: {fileID: 931128826}
-  - component: {fileID: 931128830}
   m_Layer: 0
   m_Name: RArm
   m_TagString: ragdoll
@@ -770,31 +753,6 @@ Transform:
   m_Father: {fileID: 929956721}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!61 &931128830
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 931128825}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &936328654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1255599965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -3.31, z: -0.828125}
+  m_LocalPosition: {x: -0.09, y: 3.67, z: -0.828125}
   m_LocalScale: {x: 11.012, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1272,7 +1230,6 @@ GameObject:
   - component: {fileID: 1383151780}
   - component: {fileID: 1383151779}
   - component: {fileID: 1383151778}
-  - component: {fileID: 1383151782}
   m_Layer: 0
   m_Name: LArm
   m_TagString: ragdoll
@@ -1382,31 +1339,6 @@ Transform:
   m_Father: {fileID: 929956721}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!61 &1383151782
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1383151777}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1572671174
 Prefab:
   m_ObjectHideFlags: 0
@@ -1451,6 +1383,11 @@ Prefab:
       propertyPath: offsetx
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
+        type: 2}
+      propertyPath: wordManager
+      value: 
+      objectReference: {fileID: 936328655}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
   m_IsPrefabAsset: 0
@@ -1638,6 +1575,11 @@ Prefab:
       propertyPath: offsetx
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
+        type: 2}
+      propertyPath: wordManager
+      value: 
+      objectReference: {fileID: 936328655}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
   m_IsPrefabAsset: 0

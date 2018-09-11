@@ -5,14 +5,11 @@ using UnityEngine;
 public class WordManager : MonoBehaviour {
 
     [SerializeField]List<Word> words;
-    //[SerializeField] SpawnLetter Spawner;
     private bool hasActiveWord;
-    private Word activeWord;
-    private GameObject Roca;
+    private Word activeWord=new Word("inicial");
 
-    public void AddWord(Word word,GameObject Roca) {
+    public void AddWord(Word word) {
         words.Add(word);
-        Roca = Roca;
     }
     public void TypeLetter(char Letter) {
         if (hasActiveWord)
@@ -34,9 +31,12 @@ public class WordManager : MonoBehaviour {
         }
         if (hasActiveWord && activeWord.WordTyped()) {
             hasActiveWord = false;
-            Destroy(Roca);
             words.Remove(activeWord);
         }
 
+    }
+
+    public Word getActiveWord() {
+        return activeWord;
     }
 }

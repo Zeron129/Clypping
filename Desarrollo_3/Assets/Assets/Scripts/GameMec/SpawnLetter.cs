@@ -5,8 +5,9 @@ using UnityEngine;
 public class SpawnLetter : MonoBehaviour {
     [SerializeField] float offsetx=-3;
     [SerializeField] GameObject Letra;
-    //[SerializeField] GameObject Roca;
     [SerializeField] Sprite[] Sprites;
+    [SerializeField] WordManager wordManager;
+    RagdollControl ragdoll;
     private char[] StrgToChar;
 
     public void MakeSprite(string MyStrg) {
@@ -47,12 +48,40 @@ public class SpawnLetter : MonoBehaviour {
         }
         return false;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag=="ragdoll")
+            ragdoll = collision.GetComponent<RagdollControl>();
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag=="ragdoll")
+        {
+            Destroyed();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "ragdoll")
             Destroy(this);
-    } 
+    }
+
+    public void Destroyed() {
+        if (wordManager.getActiveWord().word==gameObject.name&&wordManager.getActiveWord().WordTyped()==true)
+        {
+            foreach (Transform child in gameObject.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            InvokeRepeating("MoveHand", 0, 1);
+        }
+    }
+
+    private void MoveHand() {
+        ragdoll.HandMoves(gameObject.transform);
+    }
+    
 }
 
 
