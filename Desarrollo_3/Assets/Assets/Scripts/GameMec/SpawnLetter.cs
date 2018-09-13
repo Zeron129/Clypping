@@ -33,7 +33,7 @@ public class SpawnLetter : MonoBehaviour {
     }
 
     public bool MakeLetter(char Letter,int pos,Transform Padre) {
-        Debug.Log("Creando letras");
+        //Debug.Log("Creando letras");
         for (int i = 0; i < Sprites.Length; i++)
         {
             if (Sprites[i].name == Letter.ToString()) {
@@ -53,8 +53,12 @@ public class SpawnLetter : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="ragdoll")
+        
+        if(collision.tag == "ragdoll") {
+            Debug.Log("detecto ragdoll");
             ragdoll = collision.GetComponent<RagdollControl>();
+        }
+            
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -75,12 +79,19 @@ public class SpawnLetter : MonoBehaviour {
                 Destroy(child.gameObject);
             }
 
-            //InvokeRepeating("MoveHand", 0, 1);
+            Invoke("MoveHand",0);
         }
+
     }
 
     private void MoveHand() {
-       ragdoll.HandMoves(gameObject.transform);
+        if(!ragdoll) {
+            Debug.Log("no ragdoll");
+        }
+        else {
+            ragdoll.HandMoves(gameObject.transform);
+        }
+       
     }
     
 }

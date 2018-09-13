@@ -8,7 +8,7 @@ public class RagdollControl : MonoBehaviour {
     [SerializeField]  Transform RightHand;
     [SerializeField]  float smoothfloat;
     [SerializeField] WordManager wordManager;
-    private bool HandL = false;
+    private bool WhichHand = false;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "stones") {
@@ -46,8 +46,10 @@ public class RagdollControl : MonoBehaviour {
     }
 
     public void HandMoves(Transform roca) {
-        Vector3 lerpedpos = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
-        LeftHand.position = lerpedpos;
+         Debug.Log("Movimineto de manos");
+         Vector3 lerpedpos = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
+         LeftHand.position = lerpedpos;
+        LeftHand.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         //LeftHand.position = roca.position;
     }
     
