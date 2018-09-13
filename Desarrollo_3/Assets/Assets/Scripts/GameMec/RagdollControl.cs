@@ -12,10 +12,25 @@ public class RagdollControl : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "stones") {
-            Word word = new Word(RandomWordGen.GetRandomWord());
-            wordManager.AddWord(word);
-            CreateLetter(collision.gameObject, word);
+            if (collision.GetComponent<SpawnLetter>().OneActivation==true)
+            {
+                Word word = new Word(RandomWordGen.GetRandomWord());
+                wordManager.AddWord(word);
+                CreateLetter(collision.gameObject, word);
+            }
         }       
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+       /* if (collision.tag =="stones")
+        {
+            Debug.Log("debug typeletter");
+            foreach (char letter in Input.inputString)
+            {
+                wordManager.TypeLetter(letter);
+            }
+        }*/
     }
 
     private void CreateLetter(GameObject collision, Word word) {

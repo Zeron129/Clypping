@@ -7,26 +7,29 @@ public class SpawnLetter : MonoBehaviour {
     [SerializeField] GameObject Letra;
     [SerializeField] Sprite[] Sprites;
     [SerializeField] WordManager wordManager;
+    public bool OneActivation = true;
     RagdollControl ragdoll;
     private char[] StrgToChar;
 
     public void MakeSprite(string MyStrg) {
-        string UpperSTR = MyStrg.ToUpper();
         
-        StrgToChar = UpperSTR.ToCharArray();
-        this.gameObject.name = MyStrg;
+            string UpperSTR = MyStrg.ToUpper();
 
-        for (int i = 0; i < StrgToChar.Length; i++) {
-            if (MakeLetter(StrgToChar[i],i,gameObject.transform))
-            {
-                Debug.Log(StrgToChar[i]);
+            StrgToChar = UpperSTR.ToCharArray();
+            this.gameObject.name = MyStrg;
 
-            }
-            else
+            for (int i = 0; i < StrgToChar.Length; i++)
             {
-                Debug.Log("No se encontro la letra");
+                if (MakeLetter(StrgToChar[i], i, gameObject.transform))
+                {
+                    //Debug.Log(StrgToChar[i]);
+
+                }
+                else
+                {
+                    Debug.Log("No se encontro la letra");
+                }
             }
-        }
     }
 
     public bool MakeLetter(char Letter,int pos,Transform Padre) {
@@ -55,17 +58,15 @@ public class SpawnLetter : MonoBehaviour {
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag=="ragdoll")
+        if (collision.tag=="ragdoll"&& wordManager.getActiveWord().word == gameObject.name)
         {
             Destroyed();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "ragdoll")
-            Destroy(this);
+        OneActivation = false;
     }
-
     public void Destroyed() {
         if (wordManager.getActiveWord().word==gameObject.name&&wordManager.getActiveWord().WordTyped()==true)
         {
@@ -74,12 +75,12 @@ public class SpawnLetter : MonoBehaviour {
                 Destroy(child.gameObject);
             }
 
-            InvokeRepeating("MoveHand", 0, 1);
+            //InvokeRepeating("MoveHand", 0, 1);
         }
     }
 
     private void MoveHand() {
-        ragdoll.HandMoves(gameObject.transform);
+       ragdoll.HandMoves(gameObject.transform);
     }
     
 }

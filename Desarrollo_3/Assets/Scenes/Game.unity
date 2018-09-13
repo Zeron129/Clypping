@@ -930,6 +930,11 @@ Prefab:
       propertyPath: offsetx
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
+        type: 2}
+      propertyPath: wordManager
+      value: 
+      objectReference: {fileID: 936328655}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
   m_IsPrefabAsset: 0
@@ -1596,7 +1601,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4758820453618592, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15.153489
+      value: 10.45
       objectReference: {fileID: 0}
     - target: {fileID: 4758820453618592, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1631,6 +1636,11 @@ Prefab:
       propertyPath: offsetx
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
+        type: 2}
+      propertyPath: wordManager
+      value: 
+      objectReference: {fileID: 936328655}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
   m_IsPrefabAsset: 0

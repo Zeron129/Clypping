@@ -12,6 +12,8 @@ public class WordManager : MonoBehaviour {
         words.Add(word);
     }
     public void TypeLetter(char Letter) {
+
+        Debug.Log("Typeletter activado");
         if (hasActiveWord)
         {
             if (activeWord.getNextLetter() == Letter) {
