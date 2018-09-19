@@ -18,6 +18,7 @@ public class WordManager : MonoBehaviour {
         {
             if (activeWord.getNextLetter() == Letter) {
                 activeWord.TypedLetter();
+                
             }
         }
         else {

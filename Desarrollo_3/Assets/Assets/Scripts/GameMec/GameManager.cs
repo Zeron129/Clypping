@@ -12,12 +12,16 @@ public class GameManager : MonoBehaviour {
     [SerializeField] int _puntajeParaGanar;
     [SerializeField] float _maxEnergy;
     [SerializeField] float _energyDrainVelocity;
-    [SerializeField] string _nombreEscenaVictoria;
-    [SerializeField] string _nombreEscenaDerrota;
+    [SerializeField] float _restaPorError;
+    //[SerializeField] string _nombreEscenaVictoria;
+    //[SerializeField] string _nombreEscenaDerrota;
     int _puntaje = 0;
     float _energy = 0;
+    int _canidadPalabras = 0;
     [SerializeField] Image _currentEnergyBar;
     [SerializeField] Text _ratioText;
+    [SerializeField] Text _PalabraText;
+    [SerializeField] Text _PuntosText;
 
 
     private GameObject gameObject;
@@ -35,14 +39,22 @@ public class GameManager : MonoBehaviour {
     private void Awake() {
         _puntaje = 0;
         _energy = _maxEnergy;
+        int _canidadPalabras = 0;
     }
     private void Update() {
         StateMachine();
        // Playng();
-        //Debug.Log("Energy: " + _energy);
+        Debug.Log("Energy: " + _energy);
     }
-    public void AumentarPuntaje () {
+    public void AumentarPuntajePalabra () {
         _puntaje += _puntajePorPalabra;
+    }
+    public void AumentarPuntajeLetra(){
+        _puntaje += _puntajePorLetra;
+    }
+    public void RestarEnergiaPorError()
+    {
+        _energy -= _restaPorError;
     }
 
     public int GetPuntaje() {
@@ -64,7 +76,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Win(){
-       // SceneManager.LoadScene(_nombreEscenaVictoria);
+        // SceneManager.LoadScene(_nombreEscenaVictoria);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void Lose(){
@@ -75,6 +88,8 @@ public class GameManager : MonoBehaviour {
         float ratio = _energy / _maxEnergy;
         _currentEnergyBar.rectTransform.localScale = new Vector3(1, ratio, 1);
         _ratioText.text = (ratio * 100).ToString("0") + '%';
+        _PalabraText.text = "Palabras: " + _canidadPalabras.ToString();
+        _PuntosText.text = "Puntos: " + _puntaje.ToString();
 
         _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
 
