@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour {
 
+
+
     [SerializeField]List<Word> words;
+    [SerializeField] GameManager game;
     private bool hasActiveWord;
     private Word activeWord=new Word("inicial");
 
@@ -12,14 +15,17 @@ public class WordManager : MonoBehaviour {
         words.Add(word);
     }
     public void TypeLetter(char Letter) {
-
+     
         Debug.Log("Typeletter activado");
         if (hasActiveWord)
         {
-            if (activeWord.getNextLetter() == Letter) {
+            if (activeWord.getNextLetter() == Letter)
+            {
                 activeWord.TypedLetter();
-                
+                game.AumentarPuntajeLetra();
             }
+            else
+                game.RestarEnergiaPorError();
         }
         else {
             foreach (Word word in words) {
@@ -27,12 +33,14 @@ public class WordManager : MonoBehaviour {
                     activeWord = word;
                     hasActiveWord = true;
                     word.TypedLetter();
+                    game.AumentarPuntajeLetra();
                     break;
 
                 }
             }
         }
         if (hasActiveWord && activeWord.WordTyped()) {
+            game.AumentarPuntajePalabra();
             hasActiveWord = false;
             words.Remove(activeWord);
         }

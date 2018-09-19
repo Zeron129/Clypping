@@ -42,19 +42,20 @@ public class GameManager : MonoBehaviour {
         int _canidadPalabras = 0;
     }
     private void Update() {
-        StateMachine();
-       // Playng();
+       // StateMachine();
+        Playng();
         Debug.Log("Energy: " + _energy);
     }
     public void AumentarPuntajePalabra () {
+        _canidadPalabras += 1;
         _puntaje += _puntajePorPalabra;
     }
     public void AumentarPuntajeLetra(){
-        _puntaje += _puntajePorLetra;
+       _puntaje += _puntajePorLetra;
     }
     public void RestarEnergiaPorError()
     {
-        _energy -= _restaPorError;
+      _energy -= _restaPorError;
     }
 
     public int GetPuntaje() {
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour {
 
     private void Win(){
         // SceneManager.LoadScene(_nombreEscenaVictoria);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void Lose(){
