@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour {
 
+    PointsManager pointsManager;
+    LevelManager levelManager;
+
+
 
 
     [SerializeField]List<Word> words;
     [SerializeField] GameManager game;
     private bool hasActiveWord;
     private Word activeWord=new Word("inicial");
+
+    void Awake()
+    {
+        levelManager = GameManager.Instance.LevelManager;
+        pointsManager = GameManager.Instance.PointsManager;
+    }
 
     public void AddWord(Word word) {
         words.Add(word);
@@ -22,10 +32,10 @@ public class WordManager : MonoBehaviour {
             if (activeWord.getNextLetter() == Letter)
             {
                 activeWord.TypedLetter();
-                game.AumentarPuntajeLetra();
+                pointsManager.AumentarPuntajeLetra();
             }
             else
-                game.RestarEnergiaPorError();
+                levelManager.RestarEnergiaPorError();
         }
         else {
             foreach (Word word in words) {
@@ -33,14 +43,15 @@ public class WordManager : MonoBehaviour {
                     activeWord = word;
                     hasActiveWord = true;
                     word.TypedLetter();
-                    game.AumentarPuntajeLetra();
+                    pointsManager.AumentarPuntajeLetra();
                     break;
 
                 }
             }
         }
         if (hasActiveWord && activeWord.WordTyped()) {
-            game.AumentarPuntajePalabra();
+            pointsManager.AumentarPuntajePalabra();
+            levelManager.ReStartEnergia();
             hasActiveWord = false;
             words.Remove(activeWord);
         }
