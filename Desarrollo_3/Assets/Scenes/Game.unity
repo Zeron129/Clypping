@@ -849,8 +849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0d0f749bf0be042807f357584d6490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsManager: {fileID: 0}
-  levelManager: {fileID: 0}
+  pointsManager: {fileID: 2090837550}
+  levelManager: {fileID: 664994665}
   words: []
 --- !u!4 &936328656
 Transform:

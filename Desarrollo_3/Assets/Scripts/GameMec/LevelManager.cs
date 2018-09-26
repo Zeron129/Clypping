@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
 
     private void Actualizar()
     {
-        int auxA = 10, auxB = 50, auxC = 150;
+        int auxA = 0, auxB = 0, auxC = 0;
 
         settingsManager.ActualizarPuntajes(ref auxA, ref auxB, ref auxC);
         pointsManager.SetSettings(auxA, auxB, auxC);
