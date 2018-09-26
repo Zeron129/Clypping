@@ -8,7 +8,7 @@ public class RagdollControl : MonoBehaviour {
     [SerializeField]  Transform RightHand;
     [SerializeField]  float smoothfloat;
     [SerializeField] WordManager wordManager;
-    private bool WhichHand = false;
+    private bool Lhand = true;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "stones") {
@@ -20,18 +20,7 @@ public class RagdollControl : MonoBehaviour {
             }
         }       
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-       /* if (collision.tag =="stones")
-        {
-            Debug.Log("debug typeletter");
-            foreach (char letter in Input.inputString)
-            {
-                wordManager.TypeLetter(letter);
-            }
-        }*/
-    }
+    
 
     private void CreateLetter(GameObject collision, Word word) {
 
@@ -46,11 +35,30 @@ public class RagdollControl : MonoBehaviour {
     }
 
     public void HandMoves(Transform roca) {
-         Debug.Log("Movimineto de manos");
-         Vector3 lerpedpos = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
-         LeftHand.position = lerpedpos;
-        LeftHand.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        //LeftHand.position = roca.position;
+
+        Lhand = !Lhand;
+
+        if (Lhand && LeftHand.position != RightHand.position)
+        {
+            while (roca.position!=RightHand.position)
+            {
+                Debug.Log("Movimineto de mano Der");
+                Vector3 lerpedpos = Vector3.Lerp(RightHand.position, roca.position, smoothfloat);
+                RightHand.position = lerpedpos;
+            }
+            
+
+        }
+        else if (!Lhand && LeftHand.position != RightHand.position)
+        {
+            while (roca.position!=LeftHand.position)
+            {
+                Debug.Log("Movimineto de mano Izq");
+                Vector3 lerpedpos = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
+                LeftHand.position = lerpedpos;
+            }
+            
+        }
     }
     
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour {
+public class Follow : MonoBehaviour {
     [SerializeField] Transform Target;
     [SerializeField] float smooth =0.125f;
     [SerializeField] Vector3 offset;

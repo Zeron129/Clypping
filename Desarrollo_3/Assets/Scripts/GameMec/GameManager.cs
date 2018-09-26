@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
     private void Update() {
        // StateMachine();
         Playng();
-        Debug.Log("Energy: " + _energy);
+        //Debug.Log("Energy: " + _energy);
     }
     public void AumentarPuntajePalabra () {
         _canidadPalabras += 1;

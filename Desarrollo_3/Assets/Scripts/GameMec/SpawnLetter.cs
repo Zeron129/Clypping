@@ -8,6 +8,7 @@ public class SpawnLetter : MonoBehaviour {
     [SerializeField] Sprite[] Sprites;
     [SerializeField] WordManager wordManager;
     public bool OneActivation = true;
+    private bool handed=false;
     RagdollControl ragdoll;
     private char[] StrgToChar;
 
@@ -88,8 +89,9 @@ public class SpawnLetter : MonoBehaviour {
         if(!ragdoll) {
             Debug.Log("no ragdoll");
         }
-        else {
+        else if(!handed) {
             ragdoll.HandMoves(gameObject.transform);
+            handed = true;
         }
        
     }
