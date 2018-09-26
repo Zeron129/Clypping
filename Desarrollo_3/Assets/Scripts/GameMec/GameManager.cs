@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     //[SerializeField] string _nombreEscenaDerrota;
    
 
-
+/*
     private GameObject gameObject;
 
     private static GameManager _instance;
@@ -61,5 +61,5 @@ public class GameManager : MonoBehaviour {
             return _PointsManager;
         }
     }
-
+    */
 }

@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour {
+public class LevelManager : MonoBehaviour
+{
 
-    SettingsManager settingsManager;
-    PointsManager pointsManager;
+    [SerializeField] SettingsManager settingsManager;
+    [SerializeField] PointsManager pointsManager;
 
     float _maxEnergy;
     float _energyDrainVelocity;
@@ -20,19 +21,38 @@ public class LevelManager : MonoBehaviour {
 
     float _energy = 0;
 
-    // Use this for initialization
-    void Awake () {
-        settingsManager = GameManager.Instance.SettingsManager;
-        pointsManager = GameManager.Instance.PointsManager;
+    private void Actualizar()
+    {
+        int auxA = 10, auxB = 50, auxC = 150;
+
+        settingsManager.ActualizarPuntajes(ref auxA, ref auxB, ref auxC);
+        pointsManager.SetSettings(auxA, auxB, auxC);
+
+         settingsManager.ActualizarEnergia(ref _maxEnergy, ref _energyDrainVelocity, ref _restaPorError);
+        /*_maxEnergy = 150;
+        _energyDrainVelocity = 10;
+        _restaPorError = 20;*/
+
+        settingsManager.ActualizarUI(ref _currentEnergyBar, ref _ratioText, ref _PalabraText, ref _PuntosText);
     }
 
-     void Start(){
+
+    // Use this for initialization
+    void Awake()
+    {
+        //settingsManager = GameManager.Instance.SettingsManager;
+        //pointsManager = GameManager.Instance.PointsManager;
+    }
+
+    void Start()
+    {
         Actualizar();
         ReStartEnergia();
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         StateMachine();
     }
 
@@ -49,10 +69,10 @@ public class LevelManager : MonoBehaviour {
     //verifica la condicion de victoria/derrota
     int StateMachine()
     {
-        if (pointsManager.GetPuntajeFaltante() < 0)
+       if (pointsManager.GetPuntajeFaltante() < 0)
         {
             Win();
-            return 2;
+           return 2;
         }
         if (_energy <= 0)
         {
@@ -86,14 +106,4 @@ public class LevelManager : MonoBehaviour {
 
     }
 
-    private void Actualizar() {
-        int auxA = 0, auxB = 0, auxC = 0;
-
-        settingsManager.ActualizarPuntajes(ref auxA, ref auxB, ref auxC);
-        pointsManager.SetSettings(auxA, auxB, auxC);
-
-        settingsManager.ActualizarEnergia(ref _maxEnergy, ref _energyDrainVelocity, ref _restaPorError);
-
-        settingsManager.ActualizarUI(ref _currentEnergyBar, ref _ratioText, ref _PalabraText, ref _PuntosText);
-    }
 }

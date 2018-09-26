@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour {
 
-    PointsManager pointsManager;
-    LevelManager levelManager;
+    [SerializeField] PointsManager pointsManager;
+    [SerializeField] LevelManager levelManager;
 
 
 
 
     [SerializeField]List<Word> words;
-    [SerializeField] GameManager game;
     private bool hasActiveWord;
     private Word activeWord=new Word("inicial");
 
-    void Awake()
+   /* void Awake()
     {
         levelManager = GameManager.Instance.LevelManager;
         pointsManager = GameManager.Instance.PointsManager;
-    }
+    }*/
 
     public void AddWord(Word word) {
         words.Add(word);
