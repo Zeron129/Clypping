@@ -1,65 +1,68 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
-
-    
+public class GameManager {
+        
     //[SerializeField] string _nombreEscenaVictoria;
     //[SerializeField] string _nombreEscenaDerrota;
+
+
+
+
    
+    private GameObject managerGameObject;
 
-/*
-    private GameObject gameObject;
-
-    private static GameManager _instance;
+    private static GameManager _instance = null;
     public static GameManager Instance {
         get {
             if(_instance == null) {
                 _instance = new GameManager();
-                _instance.gameObject = new GameObject("_gameManager");
-                _instance.gameObject.AddComponent<LevelManager>();
-                _instance.gameObject.AddComponent<SettingsManager>();
-                _instance.gameObject.AddComponent<PointsManager>();
+                _instance.managerGameObject = new GameObject("_gameManager");
+                _instance.managerGameObject.AddComponent<LevelManager>();
+                _instance.managerGameObject.AddComponent<SettingsManager>();
+                _instance.managerGameObject.AddComponent<PointsManager>();
             }
             return _instance;
         }
     }
 
     private LevelManager _LevelManager;
-    public LevelManager LevelManager
-    {
-        get
-        {
+    public LevelManager LevelManager {
+        get {
             if (_LevelManager == null)
-                _LevelManager = gameObject.GetComponent<LevelManager>();
+                _LevelManager = managerGameObject.GetComponent<LevelManager>();
             return _LevelManager;
         }
     }
 
     private SettingsManager _SettingsManager;
-    public SettingsManager SettingsManager
-    {
-        get
-        {
+    public SettingsManager SettingsManager {
+        get {
             if (_SettingsManager == null)
-                _SettingsManager = gameObject.GetComponent<SettingsManager>();
+                _SettingsManager = managerGameObject.GetComponent<SettingsManager>();
             return _SettingsManager;
         }
     }
 
     private PointsManager _PointsManager;
-    public PointsManager PointsManager
-    {
-        get
-        {
+    public PointsManager PointsManager {
+        get {
             if (_PointsManager == null)
-                _PointsManager = gameObject.GetComponent<PointsManager>();
+                _PointsManager = managerGameObject.GetComponent<PointsManager>();
             return _PointsManager;
         }
     }
-    */
+
+    private WordManager _WordManager;
+    public WordManager WordManager {
+        get {
+            if (_WordManager == null)
+                _WordManager = managerGameObject.GetComponent<WordManager>();
+            return _WordManager;
+        }
+    }
+    
 }

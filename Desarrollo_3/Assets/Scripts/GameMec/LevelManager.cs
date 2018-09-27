@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour
-{
+public class LevelManager : MonoBehaviour {
 
-    [SerializeField] SettingsManager settingsManager;
-    [SerializeField] PointsManager pointsManager;
+    public SettingsManager settingsManager;
+    public PointsManager pointsManager;
 
     float _maxEnergy;
     float _energyDrainVelocity;
@@ -21,6 +20,18 @@ public class LevelManager : MonoBehaviour
 
     float _energy = 0;
 
+    void Awake()
+    {
+        settingsManager = GameManager.Instance.SettingsManager;
+        pointsManager = GameManager.Instance.PointsManager;
+    }
+
+    void Start()
+    {
+        Actualizar();
+        ReStartEnergia();
+    }
+
     private void Actualizar()
     {
         int auxA = 0, auxB = 0, auxC = 0;
@@ -28,26 +39,12 @@ public class LevelManager : MonoBehaviour
         settingsManager.ActualizarPuntajes(ref auxA, ref auxB, ref auxC);
         pointsManager.SetSettings(auxA, auxB, auxC);
 
-         settingsManager.ActualizarEnergia(ref _maxEnergy, ref _energyDrainVelocity, ref _restaPorError);
+        settingsManager.ActualizarEnergia(ref _maxEnergy, ref _energyDrainVelocity, ref _restaPorError);
         /*_maxEnergy = 150;
         _energyDrainVelocity = 10;
         _restaPorError = 20;*/
 
         settingsManager.ActualizarUI(ref _currentEnergyBar, ref _ratioText, ref _PalabraText, ref _PuntosText);
-    }
-
-
-    // Use this for initialization
-    void Awake()
-    {
-        //settingsManager = GameManager.Instance.SettingsManager;
-        //pointsManager = GameManager.Instance.PointsManager;
-    }
-
-    void Start()
-    {
-        Actualizar();
-        ReStartEnergia();
     }
 
     // Update is called once per frame

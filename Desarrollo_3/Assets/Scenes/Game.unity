@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -257,7 +257,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -653,48 +653,6 @@ Transform:
   m_Father: {fileID: 929956721}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!1 &664994664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 664994666}
-  - component: {fileID: 664994665}
-  m_Layer: 0
-  m_Name: lvl manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &664994665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 664994664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15f0921c2002a1a409ca8b46bf39255c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsManager: {fileID: 1225269264}
-  pointsManager: {fileID: 2090837550}
---- !u!4 &664994666
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 664994664}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0573149, y: 11.084884, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &700034706
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,62 +779,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &936328654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 936328656}
-  - component: {fileID: 936328655}
-  - component: {fileID: 936328657}
-  m_Layer: 0
-  m_Name: WordManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &936328655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 936328654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0d0f749bf0be042807f357584d6490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsManager: {fileID: 2090837550}
-  levelManager: {fileID: 664994665}
-  words: []
---- !u!4 &936328656
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 936328654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 2.213294, z: -0.046875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &936328657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 936328654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b1add38e9706445b731a11d4826382, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wordManager: {fileID: 936328655}
 --- !u!1001 &1007754511
 Prefab:
   m_ObjectHideFlags: 0
@@ -929,7 +831,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -990,7 +892,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -1113,7 +1015,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 1391671524720384, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
       propertyPath: m_Name
       value: Rock (7)
@@ -1130,6 +1032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225269265}
   - component: {fileID: 1225269264}
+  - component: {fileID: 1225269266}
   m_Layer: 0
   m_Name: Settings
   m_TagString: Untagged
@@ -1169,8 +1072,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225269266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1225269263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b1add38e9706445b731a11d4826382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1255599965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1375,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -1518,7 +1432,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -1670,7 +1584,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -1731,7 +1645,7 @@ Prefab:
         type: 2}
       propertyPath: wordManager
       value: 
-      objectReference: {fileID: 936328655}
+      objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
       propertyPath: newpos
@@ -1883,7 +1797,7 @@ MonoBehaviour:
   LeftHand: {fileID: 1816624952}
   RightHand: {fileID: 632279789}
   smoothfloat: 0.125
-  wordManager: {fileID: 936328655}
+  wordManager: {fileID: 0}
 --- !u!1 &2071414435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,43 +1867,3 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!1 &2090837549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2090837551}
-  - component: {fileID: 2090837550}
-  m_Layer: 0
-  m_Name: points manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2090837550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2090837549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320cb8231ac7d8745a6fb67304f8080a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &2090837551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2090837549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class WordManager : MonoBehaviour {
 
-    [SerializeField] PointsManager pointsManager;
-    [SerializeField] LevelManager levelManager;
-
-
-
-
+    PointsManager pointsManager;
+    LevelManager levelManager;
+    
     [SerializeField]List<Word> words;
     private bool hasActiveWord;
     private Word activeWord=new Word("inicial");
 
-   /* void Awake()
+   void Awake()
     {
         levelManager = GameManager.Instance.LevelManager;
         pointsManager = GameManager.Instance.PointsManager;
-    }*/
+    }
 
     public void AddWord(Word word) {
         words.Add(word);
     }
+
     public void TypeLetter(char Letter) {
      
         Debug.Log("Typeletter activado");
