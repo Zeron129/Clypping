@@ -1968,12 +1968,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2018040516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6978dfb9a40d9eb4687424e9f7657a4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bab001b648a71b4f94209e14b8686a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1816624952}
+  Hand1: {fileID: 1816624952}
+  Hand2: {fileID: 632279789}
   smooth: 0.125
-  offset: {x: 2.2, y: -2, z: 0}
+  offset: {x: 0, y: -2, z: 0}
 --- !u!212 &2018040518
 SpriteRenderer:
   m_ObjectHideFlags: 0
