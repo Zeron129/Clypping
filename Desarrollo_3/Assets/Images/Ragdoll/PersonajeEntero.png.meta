@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: f58c23598a1149340be3470278ad6dd8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Antebrazo_I
+    21300002: Antebrazo_D
+    21300004: Honda
+    21300006: Brazo_I
+    21300008: Cabeza
+    21300010: PersonajeEntero_8
+    21300012: Brazo_D
+    21300014: PersonajeEntero
+    21300016: Muzlo_I
+    21300018: Cuello
+    21300020: Muzlo_D
+    21300022: Pierna_I
+    21300024: Torso
+    21300026: Pierna_D
+    21300028: Pie_I
+    21300030: Cadera
+    21300032: Pie_D
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Antebrazo_I
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 819
+        width: 105
+        height: 237
+      alignment: 9
+      pivot: {x: 0.52568406, y: 0.06759347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1958cbaf7a0fd0944856a41aea8b6de0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Antebrazo_D
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 821
+        width: 106
+        height: 237
+      alignment: 9
+      pivot: {x: 0.4287619, y: 0.06986929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b26019c6c60d3a49a3e1d0c5de68cad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Honda
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 76
+        width: 261
+        height: 956
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c4b5dadc9a8484aae6dac34d89e0e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brazo_I
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 716
+        width: 80
+        height: 178
+      alignment: 9
+      pivot: {x: 0.46950865, y: 0.20271078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7b73eef8b08f642b75fab52b6f4f60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cabeza
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 703
+        width: 164
+        height: 153
+      alignment: 9
+      pivot: {x: 0.49999982, y: 0.14394483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5a83902d0623645851712a6895f8fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeEntero_8
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 734
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf98706c3d457249b57df9370007f84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brazo_D
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 716
+        width: 80
+        height: 177
+      alignment: 9
+      pivot: {x: 0.537233, y: 0.19082762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca239433049aef48a6ac89038c6f3ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeEntero
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 27
+        width: 692
+        height: 909
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde15076fd725894aa2ac9220410b348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzlo_I
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 446
+        width: 124
+        height: 252
+      alignment: 9
+      pivot: {x: 0.4826008, y: 0.74828106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec28b99231ead348865b032fdc23735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuello
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 600
+        width: 90
+        height: 96
+      alignment: 9
+      pivot: {x: 0.50735575, y: 0.28622437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50999f2fde7681b4e82aa74086f2037f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Muzlo_D
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 445
+        width: 118
+        height: 249
+      alignment: 9
+      pivot: {x: 0.52285403, y: 0.75343853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52069342a551fa94490909ee5ec9b42f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pierna_I
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 232
+        width: 96
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4381968, y: 0.79192674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1cfe24708ce5842abed1042500572d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torso
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 382
+        width: 216
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3374e8996b1beb343a71a81f85e8339e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pierna_D
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 238
+        width: 92
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5329802, y: 0.78151757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955ae69500157d04f88f4325f8acb9a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pie_I
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 44
+        width: 67
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5905714, y: 0.787013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedd04c096c4be64f93f3d02b39c0ce0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cadera
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 168
+        width: 204
+        height: 206
+      alignment: 9
+      pivot: {x: 0.5105757, y: 0.81681406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73004adb88c2424c808e70cb143ec25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pie_D
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 44
+        width: 65
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5, y: 0.787013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae1a0911f0e73747bf6e7f601d971ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 814a3fc1683cf014d81dddd4dde81423
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
