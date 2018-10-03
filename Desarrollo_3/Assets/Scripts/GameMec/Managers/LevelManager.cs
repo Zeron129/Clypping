@@ -10,10 +10,10 @@ public class LevelManager : MonoBehaviour {
 
     [SerializeField] PointsManager pointsManager;
 
-    float _maxEnergy;
-    float _energyDrainVelocity;
-    float _restaPorError;
-    float _energy = 0;
+    float _maxEnergy = 100;
+    float _energyDrainVelocity = 10;
+    float _restaPorError = 30;
+    float _energy = 100;
     Image _currentEnergyBar;
     Text _ratioText;
     Text _palabraText;
@@ -55,7 +55,8 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Lose(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(0);
     }
 
     private void MainGameLoop()
