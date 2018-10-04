@@ -6,12 +6,24 @@ public class SpawnLetter : MonoBehaviour {
     [SerializeField] float offsetx=-3;
     [SerializeField] GameObject Letra;
     [SerializeField] Sprite[] Sprites;
-    [SerializeField] WordManager wordManager;
+    private WordManager managertest;
     public bool OneActivation = true;
     private bool handed=false;
     RagdollControl ragdoll;
     private char[] StrgToChar;
+    //private WordManager managertest;
 
+    private void Start()
+    {
+        managertest = Object.FindObjectOfType<WordManager>();
+        if (managertest)
+        {
+            Debug.Log("se encontro wordmanager");
+        }
+        else {
+            Debug.Log("Wordmanager nop encontrado");
+        }
+    }
     public void MakeSprite(string MyStrg) {
         
             string UpperSTR = MyStrg.ToUpper();
@@ -63,7 +75,7 @@ public class SpawnLetter : MonoBehaviour {
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag=="ragdoll"&& wordManager.getActiveWord().word == gameObject.name)
+        if (collision.tag=="ragdoll"&& managertest.getActiveWord().word == gameObject.name)
         {
             Destroyed();
         }
@@ -73,7 +85,7 @@ public class SpawnLetter : MonoBehaviour {
         OneActivation = false;
     }
     public void Destroyed() {
-        if (wordManager.getActiveWord().word==gameObject.name&&wordManager.getActiveWord().WordTyped()==true)
+        if (managertest.getActiveWord().word==gameObject.name&&managertest.getActiveWord().WordTyped()==true)
         {
             foreach (Transform child in gameObject.transform)
             {

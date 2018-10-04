@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2370,19 +2370,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
         type: 2}
-      propertyPath: offsetx
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
-        type: 2}
       propertyPath: wordManager
       value: 
       objectReference: {fileID: 936328655}
-    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
-        type: 2}
-      propertyPath: newpos
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
   m_IsPrefabAsset: 0
@@ -2609,6 +2599,11 @@ Prefab:
         type: 2}
       propertyPath: newpos
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114262632124346818, guid: c21e42a269e56ab4296fda640bf1d078,
+        type: 2}
+      propertyPath: OneActivation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
@@ -3095,7 +3090,7 @@ MonoBehaviour:
   levelManager: {fileID: 1372515247}
   _puntajePorLetra: 10
   _puntajePorPalabra: 50
-  _puntajeParaGanar: 1000
+  _puntajeParaGanar: 10000
   _maxEnergy: 100
   _energyDrainVelocity: 30
   _restaPorError: 30
