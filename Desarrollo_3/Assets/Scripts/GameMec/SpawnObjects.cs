@@ -6,16 +6,17 @@ public class SpawnObjects : MonoBehaviour {
     [SerializeField] private Vector3 center;
     [SerializeField] private Vector3 size;
     [SerializeField] private GameObject prefab;
+    [SerializeField] private int ObjMin;
+    [SerializeField] private int ObjMax;
     // Use this for initialization
     void Start () {
-        //InvokeRepeating("spawmRocks",0,0.2f);
+        for (int i = 0; i < Random.Range(ObjMin,ObjMax); i++)
+        {
+            Invoke("spawmRocks", 0);
+        }
+        
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKey(KeyCode.Q))
-            spawmRocks();
-	}
     void spawmRocks() {
         Vector3 pos = gameObject.transform.position + center + new Vector3(Random.Range(-size.x/2,size.x/2), Random.Range(-size.y / 2,size.y/2), Vector3.zero.z);
         Instantiate(prefab, pos, Quaternion.identity);
