@@ -9,16 +9,16 @@ public class SpawnObjects : MonoBehaviour {
     [SerializeField] private int ObjMin;
     [SerializeField] private int ObjMax;
     // Use this for initialization
-    void Start () {
-        for (int i = 0; i < Random.Range(ObjMin,ObjMax); i++)
+    private void Awake()
+    {
+        for (int i = 0; i < Random.Range(ObjMin, ObjMax); i++)
         {
-            Invoke("spawmRocks", 0);
+            spawmRocks(i*3);
         }
-        
-	}
-	
-    void spawmRocks() {
-        Vector3 pos = gameObject.transform.position + center + new Vector3(Random.Range(-size.x/2,size.x/2), Random.Range(-size.y / 2,size.y/2), Vector3.zero.z);
+    }
+
+    void spawmRocks(int i) {
+        Vector3 pos = gameObject.transform.position + center + new Vector3(Random.Range(-size.x/2,size.x/2), -size.y/2 + i, Vector3.zero.z);
         Instantiate(prefab, pos, Quaternion.identity);
     }
 
