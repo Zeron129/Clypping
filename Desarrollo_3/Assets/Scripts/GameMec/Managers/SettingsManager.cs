@@ -23,8 +23,8 @@ public class SettingsManager : MonoBehaviour {
     //[SerializeField] string _nombreEscenaVictoria;
     //UI
     [SerializeField] Image _currentEnergyBar;
-    [SerializeField] Text _ratioText;
-    [SerializeField] Text _PalabraText;
+   // [SerializeField] Text _ratioText;
+    //[SerializeField] Text _PalabraText;
     [SerializeField] Text _PuntosText;
 
     void Awake() {
@@ -35,7 +35,7 @@ public class SettingsManager : MonoBehaviour {
     void Start () {
         pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajePorPalabra, _puntajeParaGanar);
         levelManager.ActualzarLevelManager(_maxEnergy, _energyDrainVelocity, _restaPorError);
-        levelManager.ActualzarUI(_currentEnergyBar, _ratioText, _PalabraText, _PuntosText);
+        levelManager.ActualzarUI(_currentEnergyBar,/* _ratioText, _PalabraText,*/ _PuntosText);
 	}
 	
 	void Update () {

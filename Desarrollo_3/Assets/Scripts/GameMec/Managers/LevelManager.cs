@@ -15,8 +15,8 @@ public class LevelManager : MonoBehaviour {
     float _restaPorError = 30;
     float _energy = 100;
     Image _currentEnergyBar;
-    Text _ratioText;
-    Text _palabraText;
+    //Text _ratioText;
+    //Text _palabraText;
     Text _puntosText;
     
     void Awake(){
@@ -62,10 +62,11 @@ public class LevelManager : MonoBehaviour {
     private void MainGameLoop()
     {
         float ratio = _energy / _maxEnergy;
-        _currentEnergyBar.rectTransform.localScale = new Vector3(1, ratio, 1);
-        _ratioText.text = (ratio * 100).ToString("0") + '%';
-        _palabraText.text = "Palabras: " + pointsManager.GetCantidadDePalabras().ToString();
-        _puntosText.text = "Puntos: " + pointsManager.GetPuntaje().ToString();
+        //_currentEnergyBar.rectTransform.localScale = new Vector3(1, ratio, 1);
+        _currentEnergyBar.fillAmount = ratio;
+       // _ratioText.text = (ratio * 100).ToString("0") + '%';
+       // _palabraText.text = "Palabras: " + pointsManager.GetCantidadDePalabras().ToString();
+        _puntosText.text =  pointsManager.GetPuntaje().ToString();
 
         _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
 
@@ -77,10 +78,10 @@ public class LevelManager : MonoBehaviour {
         _restaPorError = RestaPorError;
     }
 
-    public void ActualzarUI(Image CurrentEnergyBar, Text RatioText, Text PalabraText, Text PuntosText){
+    public void ActualzarUI(Image CurrentEnergyBar,/* Text RatioText, Text PalabraText,*/ Text PuntosText){
         _currentEnergyBar = CurrentEnergyBar;
-        _ratioText = RatioText;
-        _palabraText = PalabraText;
+       // _ratioText = RatioText;
+        //_palabraText = PalabraText;
         _puntosText = PuntosText;
     }
 }
