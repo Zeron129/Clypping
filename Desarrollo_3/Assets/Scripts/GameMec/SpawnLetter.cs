@@ -79,6 +79,27 @@ public class SpawnLetter : MonoBehaviour {
         {
             Destroyed();
         }
+        /*
+        if (collision.tag == "ragdoll") {
+            if (!managertest.getActiveWord().WordTyped()) {
+                if (managertest.getActiveWord().word == this.gameObject.name)
+                {
+                    string ChildName = managertest.getActiveWord().getNextLetter().ToString();
+                    if (transform.Find(ChildName))
+                    {
+                        Debug.Log("hijo encontrado");
+                        Destroy(transform.Find(ChildName).gameObject);
+                    }
+                    else {
+                        Debug.Log("no se encontro hijo");
+                    }
+                
+                }
+                else {
+                    Debug.Log("no funciona lpm");
+                }
+            }
+        }*/
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

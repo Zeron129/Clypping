@@ -51,6 +51,7 @@ public class WordManager : MonoBehaviour {
             levelManager.RestablecerEnergia();
             hasActiveWord = false;
             words.Remove(activeWord);
+            Letter = '0';
         }
 
     }

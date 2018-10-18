@@ -10,7 +10,8 @@ public class WordInput : MonoBehaviour {
     void Update () {
         foreach (char letter in Input.inputString) {
             Debug.Log(letter);
-            wordManager.TypeLetter(letter);
+            char LowerChar = char.ToLower(letter);
+            wordManager.TypeLetter(LowerChar);
         }
 	}
 }
