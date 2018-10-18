@@ -17,6 +17,11 @@ public class Word {
         return word[typeIndex];
     }
 
+    public char CurrentLetter()
+    {
+        return word[typeIndex-1];
+    }
+
     public void TypedLetter() {
         typeIndex++;
     }

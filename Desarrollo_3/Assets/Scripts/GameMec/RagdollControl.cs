@@ -43,8 +43,8 @@ public class RagdollControl : MonoBehaviour {
             while (roca.position!=RightHand.position)
             {
                 Debug.Log("Movimineto de mano Der");
-                Vector3 lerpedpos = Vector3.Lerp(RightHand.position, roca.position, smoothfloat);
-                RightHand.position = lerpedpos;
+                RightHand.position = Vector3.Lerp(RightHand.position, roca.position, smoothfloat);
+                
             }
             
 
@@ -54,8 +54,8 @@ public class RagdollControl : MonoBehaviour {
             while (roca.position!=LeftHand.position)
             {
                 Debug.Log("Movimineto de mano Izq");
-                Vector3 lerpedpos = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
-                LeftHand.position = lerpedpos;
+                LeftHand.position = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
+                
             }
             
         }
