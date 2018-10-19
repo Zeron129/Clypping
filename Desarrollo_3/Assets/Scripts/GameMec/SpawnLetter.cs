@@ -106,6 +106,10 @@ public class SpawnLetter : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         OneActivation = false;
+        Destroyed();
+        if (OneActivation = false) {
+            Destroy(this);
+        }
     }
     public void Destroyed() {
         if (managertest.getActiveWord().word==gameObject.name&&managertest.getActiveWord().WordTyped()==true)

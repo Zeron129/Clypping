@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RagdollControl : MonoBehaviour {
 
-    [SerializeField]  Transform LeftHand;
-    [SerializeField]  Transform RightHand;
+    [SerializeField]  GameObject LeftHand;
+    [SerializeField]  GameObject RightHand;
     [SerializeField]  float smoothfloat;
     [SerializeField] WordManager wordManager;
     private bool Lhand = true;
@@ -38,26 +38,13 @@ public class RagdollControl : MonoBehaviour {
 
         Lhand = !Lhand;
 
-        if (Lhand && LeftHand.position != RightHand.position)
+        if (Lhand )
         {
-            while (roca.position!=RightHand.position)
-            {
-                Debug.Log("Movimineto de mano Der");
-                RightHand.position = Vector3.Lerp(RightHand.position, roca.position, smoothfloat);
-                
-            }
-            
-
+            LeftHand.GetComponent<HandControl>().Movement(true,roca);
         }
-        else if (!Lhand && LeftHand.position != RightHand.position)
+        else if (!Lhand)
         {
-            while (roca.position!=LeftHand.position)
-            {
-                Debug.Log("Movimineto de mano Izq");
-                LeftHand.position = Vector3.Lerp(LeftHand.position, roca.position, smoothfloat);
-                
-            }
-            
+            RightHand.GetComponent<HandControl>().Movement(true, roca);
         }
     }
     
