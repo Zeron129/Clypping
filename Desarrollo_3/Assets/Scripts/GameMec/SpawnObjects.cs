@@ -11,12 +11,16 @@ public class SpawnObjects : MonoBehaviour {
     // Use this for initialization
     private void Awake()
     {
+
+        center = this.gameObject.transform.position;
+    }
+    private void Start()
+    {
         for (int i = 0; i < Random.Range(ObjMin, ObjMax); i++)
         {
-            spawmRocks(i*3);
+            spawmRocks(i * 3);
         }
     }
-
     void spawmRocks(int i) {
         Vector3 pos = gameObject.transform.position + center + new Vector3(Random.Range(-size.x/2,size.x/2), -size.y/2 + i, Vector3.zero.z);
         Instantiate(prefab, pos, Quaternion.identity);
