@@ -98,7 +98,7 @@ public class SpawnLetter : MonoBehaviour {
                 
                 }
                 else {
-                    Debug.Log("no funciona lpm");
+                    Debug.Log("no funcionas");
                 }
             }
         }
@@ -107,7 +107,7 @@ public class SpawnLetter : MonoBehaviour {
     {
         OneActivation = false;
         Destroyed();
-        if (OneActivation = false) {
+        if (OneActivation == false) {
             Destroy(this);
         }
     }
