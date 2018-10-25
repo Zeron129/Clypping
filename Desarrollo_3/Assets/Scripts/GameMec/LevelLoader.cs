@@ -10,16 +10,13 @@ public class LevelLoader : MonoBehaviour {
     [SerializeField] Slider slider;
     [SerializeField] Text progressText;
 
+
     public void LoadLevel(int sceneIndex) {
         StartCoroutine(LoadAsynchnously(sceneIndex));
     }
 
     IEnumerator LoadAsynchnously(int sceneIndex) {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-        //AsyncOperation operation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
 
         loadingscreen.SetActive(true);
 
