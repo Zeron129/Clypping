@@ -39,8 +39,11 @@ public class RandomWordGen : MonoBehaviour {
         "negro",
         "colgar",
         "hilo"
-    }
-      ;
+
+    };
+    private static List<string> auxwords = new List<string>();
+    private static string randomWord;
+    private static bool List1=true;
 
     private static void Start()
     {/*
@@ -51,10 +54,26 @@ public class RandomWordGen : MonoBehaviour {
     }
 
     public static string GetRandomWord () {
-        Debug.Log("Hay " + words.Count + " palabras");
-        int randomIndex = Random.Range(0, words.Count);
-        string randomWord = words[randomIndex];
-        words.Remove(randomWord);
+        if (List1)
+        {
+            Debug.Log("Hay " + words.Count + " palabras");
+            int randomIndex = Random.Range(0, words.Count);
+            randomWord = words[randomIndex];
+            auxwords.Add(randomWord);
+            words.Remove(randomWord);
+        }
+        else {
+            Debug.Log("Hay " + auxwords.Count + " palabras");
+            int randomIndex = Random.Range(0, auxwords.Count);
+            randomWord = auxwords[randomIndex];
+            words.Add(randomWord);
+            auxwords.Remove(randomWord);
+        }
+        if (words.Count >= 35)
+            List1 = true;
+        if (words.Count<=0)
+            List1 = false;
+        
         return randomWord;
     }
 }

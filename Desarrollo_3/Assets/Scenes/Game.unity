@@ -2927,7 +2927,7 @@ MonoBehaviour:
   levelManager: {fileID: 1372515247}
   _puntajePorLetra: 10
   _puntajePorPalabra: 0
-  _puntajeParaGanar: 10000
+  _puntajeParaGanar: 500
   _maxEnergy: 100
   _energyDrainVelocity: 5
   _restaPorError: 30
