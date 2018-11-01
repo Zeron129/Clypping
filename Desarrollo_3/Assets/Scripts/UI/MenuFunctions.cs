@@ -12,9 +12,19 @@ public class MenuFunctions : MonoBehaviour {
     [SerializeField] Text TitleText;
     [SerializeField] Text VersionText;
 
+    [SerializeField] LevelManager levelManager;
+
+
     void Awake(){
-        TitleText.text = Application.productName;
-        VersionText.text = Application.productName + "_V." + Application.version;
+        if (levelManager == null){
+            TitleText.text = Application.productName;
+            VersionText.text = Application.productName + "_V." + Application.version;
+        }
+    }
+
+    public void SetPause(bool pause)
+    {
+        levelManager.SetPauseStatus(pause);
     }
 
 

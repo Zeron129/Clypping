@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour {
     float _energyDrainVelocity = 10;
     float _restaPorError = 30;
     float _energy = 100;
+    bool _pauseIsActive = false;
     Image _currentEnergyBar;
     //Text _ratioText;
     //Text _palabraText;
@@ -22,6 +23,7 @@ public class LevelManager : MonoBehaviour {
     void Awake(){
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
+        _pauseIsActive = false;
     }
 
     void Start () {
@@ -41,6 +43,15 @@ public class LevelManager : MonoBehaviour {
     public void RestablecerEnergia(){
         _energy = _maxEnergy;
     }
+
+    public void SetPauseStatus(bool pause) {
+        _pauseIsActive = pause;
+    }
+
+    public bool GetPauseStatus() {
+        return _pauseIsActive;
+    }
+
 
     //verifica la condicion de victoria/derrota
     void StateMachine(){
@@ -67,8 +78,10 @@ public class LevelManager : MonoBehaviour {
        // _ratioText.text = (ratio * 100).ToString("0") + '%';
        // _palabraText.text = "Palabras: " + pointsManager.GetCantidadDePalabras().ToString();
         _puntosText.text =  pointsManager.GetPuntaje().ToString();
+        if (!_pauseIsActive)
+            _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
 
-        _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
+        Debug.Log("pause: "+_pauseIsActive);
 
     }
 
