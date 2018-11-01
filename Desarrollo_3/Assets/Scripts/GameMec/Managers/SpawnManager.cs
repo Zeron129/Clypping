@@ -13,12 +13,15 @@ public class SpawnManager : MonoBehaviour {
 	// Use this for  initialization
 
 	void Start () {
+        PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         SpawnObj();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (PlayerTransform.position.y > (spawnY - amnObjectsOnScreen * ObjectLength)) {
+            SpawnObj();
+        }
 	}
 
     private void SpawnObj() {
@@ -31,6 +34,6 @@ public class SpawnManager : MonoBehaviour {
         GO2.transform.SetParent(Parent.transform);
         
         GO2.transform.position = new Vector3(spawnX, Vector3.up.y * spawnY, 0);
-        
+        spawnY += ObjectLength;
     }
 }
