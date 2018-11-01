@@ -855,7 +855,6 @@ GameObject:
   m_Component:
   - component: {fileID: 555149613}
   - component: {fileID: 555149614}
-  - component: {fileID: 555149615}
   m_Layer: 0
   m_Name: FuntionObj
   m_TagString: Untagged
@@ -892,20 +891,10 @@ MonoBehaviour:
   progressText: {fileID: 791192226}
   TitleText: {fileID: 1120249608}
   VersionText: {fileID: 464582832}
-  levelManager: {fileID: 0}
---- !u!114 &555149615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 555149612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73abcb0a75f14242a3c281672d6144c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   Master: {fileID: 24100000, guid: 904432631715a454796efd1d7a47a4f1, type: 2}
   Music: {fileID: 1110530644}
+  levelManager: {fileID: 0}
+  gameManager: {fileID: 1467447857}
 --- !u!1 &562950158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1410,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 555149615}
+      - m_Target: {fileID: 555149614}
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
@@ -1724,7 +1713,7 @@ RectTransform:
   - {fileID: 1347127605}
   - {fileID: 1243426499}
   m_Father: {fileID: 795294749}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1787,7 +1776,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 555149615}
+      - m_Target: {fileID: 555149614}
         m_MethodName: setQuality
         m_Mode: 0
         m_Arguments:
@@ -1941,9 +1930,9 @@ RectTransform:
   - {fileID: 105968444}
   - {fileID: 580822477}
   - {fileID: 621894437}
-  - {fileID: 784635572}
   - {fileID: 1147172157}
   - {fileID: 1507569589}
+  - {fileID: 784635572}
   m_Father: {fileID: 1110530643}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2755,7 +2744,7 @@ RectTransform:
   - {fileID: 1013562159}
   - {fileID: 1847934723}
   m_Father: {fileID: 795294749}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2804,7 +2793,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 555149615}
+      - m_Target: {fileID: 555149614}
         m_MethodName: SetMute
         m_Mode: 0
         m_Arguments:
@@ -3452,7 +3441,7 @@ GameObject:
   - component: {fileID: 1507569589}
   - component: {fileID: 1507569590}
   m_Layer: 0
-  m_Name: Toggle
+  m_Name: Fullscreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3472,7 +3461,7 @@ RectTransform:
   - {fileID: 924012500}
   - {fileID: 1572298280}
   m_Father: {fileID: 795294749}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3522,7 +3511,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 555149615}
+      - m_Target: {fileID: 555149614}
         m_MethodName: FullscreenChange
         m_Mode: 0
         m_Arguments:

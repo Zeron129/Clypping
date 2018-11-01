@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour {
 
     [SerializeField] PointsManager pointsManager;
 
+
     float _maxEnergy = 100;
     float _energyDrainVelocity = 10;
     float _restaPorError = 30;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class MenuFunctions : MonoBehaviour {
 
@@ -12,7 +13,11 @@ public class MenuFunctions : MonoBehaviour {
     [SerializeField] Text TitleText;
     [SerializeField] Text VersionText;
 
+    [SerializeField] AudioMixer Master;
+    [SerializeField] AudioSource Music;
+
     [SerializeField] LevelManager levelManager;
+    [SerializeField] GameManager gameManager;
 
 
     void Awake(){
@@ -20,6 +25,7 @@ public class MenuFunctions : MonoBehaviour {
             TitleText.text = Application.productName;
             VersionText.text = Application.productName + "_V." + Application.version;
         }
+        Music.mute = gameManager.GetMuteStatus();
     }
 
     public void SetPause(bool pause)
@@ -48,5 +54,23 @@ public class MenuFunctions : MonoBehaviour {
 
     public void QuitGame() {
         Application.Quit();
+    }
+
+    public void SetVolume(float volume){
+        Master.SetFloat("MasterVolume", volume);
+    }
+
+    public void SetMute(bool mute)
+    {
+        Music.mute = mute;
+        gameManager.SetMuteStatus(mute);
+    }
+
+    public void setQuality(int QualityIndex){
+        QualitySettings.SetQualityLevel(QualityIndex);
+    }
+
+    public void FullscreenChange(bool fullscreen){
+        Screen.fullScreen = fullscreen;
     }
 }

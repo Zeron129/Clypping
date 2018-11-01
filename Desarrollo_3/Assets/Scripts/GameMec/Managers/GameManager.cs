@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-    
+
+    int _highscore = 0;
+    bool _Mute = false;
+
     private GameObject managerGameObject;
 
     private static GameManager _instance;
@@ -19,5 +22,21 @@ public class GameManager : MonoBehaviour {
             return _instance;
         }
     }
-   
+
+    private void Awake(){
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void UpdateHighscore(int score) {
+        if (_highscore < score)
+            _highscore = score;
+    }
+
+    public bool GetMuteStatus() {
+        return _Mute;
+    }
+
+    public void SetMuteStatus(bool mute) {
+        _Mute = mute;
+    }
 }
