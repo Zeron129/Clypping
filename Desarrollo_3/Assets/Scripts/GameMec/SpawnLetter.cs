@@ -106,7 +106,11 @@ public class SpawnLetter : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         OneActivation = false;
-        Destroyed();
+        foreach (Transform child in gameObject.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         if (OneActivation == false) {
             Destroy(this);
         }
