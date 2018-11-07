@@ -33,6 +33,10 @@ public class PointsManager : MonoBehaviour {
         return _puntaje;
     }
 
+    public int GetPuntajeParaGanar(){
+        return _puntajeParaGanar;
+    }
+
     public int GetCantidadDePalabras(){
         return _canidadPalabras;
     }

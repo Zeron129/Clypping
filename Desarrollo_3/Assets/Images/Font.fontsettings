@@ -1169,6 +1169,22 @@ Font:
       height: 100
     advance: 50
     flipped: 1
+  - serializedVersion: 2
+    index: 186
+    uv:
+      serializedVersion: 2
+      x: 0.7076087
+      y: 0.27
+      width: 0.03043478
+      height: -0.27
+    vert:
+      serializedVersion: 2
+      x: 0
+      y: -5
+      width: 50
+      height: 100
+    advance: 50
+    flipped: 0
   m_KerningValues: []
   m_PixelScale: 0.1
   m_FontData: 
@@ -1248,6 +1264,7 @@ Font:
   - _
   - ' '
   - ':'
+  - "\xBA"
   m_FallbackFonts: []
   m_FontRenderingMode: 0
   m_UseLegacyBoundsCalculation: 0

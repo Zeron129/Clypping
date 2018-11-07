@@ -892,10 +892,10 @@ MonoBehaviour:
     m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00000
+  m_Text: 000/000
 --- !u!222 &374230916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3249,7 +3249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9764151, b: 0.9764151, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3257,19 +3257,24 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 27d4e005c05828c45bb31ef0aa2e918f, type: 2}
-    m_FontSize: 5
+    m_Font: {fileID: 12800000, guid: c9f6d0e7bc8541498c9a4799ba184ede, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 1
-    m_MaxSize: 10
-    m_Alignment: 3
+    m_MinSize: 0
+    m_MaxSize: 32
+    m_Alignment: 6
     m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: bla bla bla
+  m_Text: "- Escribir las palabras en las rocas para avanzar y conseguir puntos.\r\n-
+    Una vez elegida una no se podr\xE1 cambiar de palabra hasta que esta se termine
+    de escribir.\r\n- Los errores restan energ\xEDa y la letra deber\xE1 volver a
+    escribirse.\r\n- Si se agota la energ\xEDa el jugador perder\xE1.\r\n- Se ganar\xE1
+    si el jugador consigue determinada cantidad de puntos.\r\n- Se ganar\xE1 si el
+    jugador consigue determinada cantidad de puntos."
 --- !u!222 &975691429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3637,7 +3642,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -350, y: 174.89018}
-  m_SizeDelta: {x: 336.1, y: 121}
+  m_SizeDelta: {x: 367.3, y: 121}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1079236132
 MonoBehaviour:
@@ -7007,10 +7012,10 @@ MonoBehaviour:
   levelManager: {fileID: 1372515247}
   _puntajePorLetra: 10
   _puntajePorPalabra: 0
-  _puntajeParaGanar: 500
+  _puntajeParaGanar: 1000
   _maxEnergy: 100
   _energyDrainVelocity: 5
-  _restaPorError: 30
+  _restaPorError: 10
   _currentEnergyBar: {fileID: 2071414438}
   _victoryScreen: {fileID: 1587055497}
   _defeatScreen: {fileID: 606219741}

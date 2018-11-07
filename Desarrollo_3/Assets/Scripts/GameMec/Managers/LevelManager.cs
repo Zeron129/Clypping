@@ -82,7 +82,7 @@ public class LevelManager : MonoBehaviour {
     {
         float ratio = _energy / _maxEnergy;
         _currentEnergyBar.fillAmount = ratio;
-        _puntosText.text =  pointsManager.GetPuntaje().ToString();
+        _puntosText.text = pointsManager.GetPuntaje().ToString() + "/" + pointsManager.GetPuntajeParaGanar().ToString();
         if (!_pauseIsActive)
             _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
 
