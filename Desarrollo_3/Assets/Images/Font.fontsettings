@@ -1153,6 +1153,22 @@ Font:
       height: 100
     advance: 50
     flipped: 0
+  - serializedVersion: 2
+    index: 58
+    uv:
+      serializedVersion: 2
+      x: 0.68430537
+      y: 0.05715103
+      width: 0.10348038
+      height: 0.10048455
+    vert:
+      serializedVersion: 2
+      x: 0
+      y: -5
+      width: 50
+      height: 100
+    advance: 50
+    flipped: 1
   m_KerningValues: []
   m_PixelScale: 0.1
   m_FontData: 
@@ -1231,6 +1247,7 @@ Font:
   - z
   - _
   - ' '
+  - ':'
   m_FallbackFonts: []
   m_FontRenderingMode: 0
   m_UseLegacyBoundsCalculation: 0

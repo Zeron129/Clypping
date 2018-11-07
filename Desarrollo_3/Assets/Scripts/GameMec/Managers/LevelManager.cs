@@ -16,11 +16,14 @@ public class LevelManager : MonoBehaviour {
     float _restaPorError = 30;
     float _energy = 100;
     bool _pauseIsActive = false;
+    GameObject _victoryScreen;
+    GameObject _defeatScreen;
+    GameObject _botones;
     Image _currentEnergyBar;
-    //Text _ratioText;
-    //Text _palabraText;
     Text _puntosText;
-    
+    Text _puntosfinalVText;
+    Text _puntosfinalDText;
+
     void Awake(){
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
@@ -62,22 +65,23 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Win(){
-        // SceneManager.LoadScene(_nombreEscenaVictoria);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        _victoryScreen.SetActive(true);
+        _botones.SetActive(false);
+        _pauseIsActive = true;
+        _puntosfinalVText.text = "Puntos: " + pointsManager.GetPuntaje().ToString();
     }
 
     private void Lose(){
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(0);
+        _defeatScreen.SetActive(true);
+        _botones.SetActive(false);
+        _pauseIsActive = true;
+        _puntosfinalDText.text = "Puntos: " + pointsManager.GetPuntaje().ToString();
     }
 
     private void MainGameLoop()
     {
         float ratio = _energy / _maxEnergy;
-        //_currentEnergyBar.rectTransform.localScale = new Vector3(1, ratio, 1);
         _currentEnergyBar.fillAmount = ratio;
-       // _ratioText.text = (ratio * 100).ToString("0") + '%';
-       // _palabraText.text = "Palabras: " + pointsManager.GetCantidadDePalabras().ToString();
         _puntosText.text =  pointsManager.GetPuntaje().ToString();
         if (!_pauseIsActive)
             _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
@@ -92,10 +96,14 @@ public class LevelManager : MonoBehaviour {
         _restaPorError = RestaPorError;
     }
 
-    public void ActualzarUI(Image CurrentEnergyBar,/* Text RatioText, Text PalabraText,*/ Text PuntosText){
+    public void ActualzarUI(Image CurrentEnergyBar, Text PuntosText, Text PuntosFinalVText, Text PuntosFinalDText, GameObject VictoryScreen,
+                            GameObject DefeatScreen, GameObject Botones){
         _currentEnergyBar = CurrentEnergyBar;
-       // _ratioText = RatioText;
-        //_palabraText = PalabraText;
         _puntosText = PuntosText;
+        _puntosfinalVText = PuntosFinalVText;
+        _puntosfinalDText = PuntosFinalDText;
+        _victoryScreen = VictoryScreen;
+        _defeatScreen = DefeatScreen;
+        _botones = Botones;
     }
 }

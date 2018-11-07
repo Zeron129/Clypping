@@ -19,13 +19,14 @@ public class SettingsManager : MonoBehaviour {
     [SerializeField] float _maxEnergy;
     [SerializeField] float _energyDrainVelocity;
     [SerializeField] float _restaPorError;
-    //Scenes
-    //[SerializeField] string _nombreEscenaVictoria;
     //UI
     [SerializeField] Image _currentEnergyBar;
-   // [SerializeField] Text _ratioText;
-    //[SerializeField] Text _PalabraText;
+    [SerializeField] GameObject _victoryScreen;
+    [SerializeField] GameObject _defeatScreen;
+    [SerializeField] GameObject _botones;
     [SerializeField] Text _PuntosText;
+    [SerializeField] Text _puntosfinalVText;
+    [SerializeField] Text _puntosfinalDText;
 
     void Awake() {
         if (instance == null) instance = this;
@@ -35,7 +36,7 @@ public class SettingsManager : MonoBehaviour {
     void Start () {
         pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajePorPalabra, _puntajeParaGanar);
         levelManager.ActualzarLevelManager(_maxEnergy, _energyDrainVelocity, _restaPorError);
-        levelManager.ActualzarUI(_currentEnergyBar,/* _ratioText, _PalabraText,*/ _PuntosText);
+        levelManager.ActualzarUI(_currentEnergyBar, _PuntosText, _puntosfinalVText, _puntosfinalDText, _victoryScreen, _defeatScreen, _botones);
 	}
 	
 	void Update () {
