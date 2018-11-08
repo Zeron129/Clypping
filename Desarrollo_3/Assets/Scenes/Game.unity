@@ -3273,8 +3273,7 @@ MonoBehaviour:
     Una vez elegida una no se podr\xE1 cambiar de palabra hasta que esta se termine
     de escribir.\r\n- Los errores restan energ\xEDa y la letra deber\xE1 volver a
     escribirse.\r\n- Si se agota la energ\xEDa el jugador perder\xE1.\r\n- Se ganar\xE1
-    si el jugador consigue determinada cantidad de puntos.\r\n- Se ganar\xE1 si el
-    jugador consigue determinada cantidad de puntos."
+    si el jugador consigue determinada cantidad de puntos.\r"
 --- !u!222 &975691429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3312,10 +3311,10 @@ RectTransform:
   m_Father: {fileID: 700034710}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -27.999998}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &995786884
 GameObject:
@@ -5463,7 +5462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 202.89018}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1708308971
@@ -5932,7 +5931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 153.99997, y: 202.89018}
+  m_AnchoredPosition: {x: 189.8, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1835111267
