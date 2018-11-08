@@ -52,12 +52,12 @@ public class SpawnLetter : MonoBehaviour {
             if (Sprites[i].name == Letter.ToString()) {
                 GameObject Character = Instantiate(Letra,Padre);
                 Vector3 posicion = Padre.transform.position;
-                posicion.x = (Sprites[i].bounds.size.x * pos) + offsetx + Padre.position.x;
+                posicion.x = (Sprites[i].bounds.size.x*pos) + offsetx +Padre.position.x;
                 Character.transform.position = posicion;
                 Character.name = Sprites[i].name;
                 Character.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 Character.GetComponent<SpriteRenderer>().sprite = Sprites[i];
-                
+
                 return true;
             }
             
