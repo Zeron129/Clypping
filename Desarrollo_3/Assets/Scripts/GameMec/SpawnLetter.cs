@@ -55,7 +55,7 @@ public class SpawnLetter : MonoBehaviour {
                 posicion.x = (Sprites[i].bounds.size.x*pos) + offsetx +Padre.position.x;
                 Character.transform.position = posicion;
                 Character.name = Sprites[i].name;
-                Character.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                Character.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 Character.GetComponent<SpriteRenderer>().sprite = Sprites[i];
 
                 return true;

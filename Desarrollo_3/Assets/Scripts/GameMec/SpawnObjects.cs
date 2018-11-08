@@ -22,6 +22,7 @@ public class SpawnObjects : MonoBehaviour {
         }
     }
     void spawmRocks(int i) {
+        prefab.GetComponent<Renderer>().sortingOrder = 2;
         Vector3 pos = gameObject.transform.position + center + new Vector3(Random.Range(-size.x/2,size.x/2), -size.y/2 + i, Vector3.zero.z);
         Instantiate(prefab, pos, Quaternion.identity);
     }

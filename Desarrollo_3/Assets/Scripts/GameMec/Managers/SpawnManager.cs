@@ -47,6 +47,7 @@ public class SpawnManager : MonoBehaviour {
 
         GO.transform.position = new Vector3(0, Vector3.up.y * spawnY01, 0)+BackgroundOffset;
         spawnY01 += Background.GetComponent<Renderer>().bounds.size.y-1;
+        Background.GetComponent<Renderer>().sortingOrder = 1;
 
     }
 }
