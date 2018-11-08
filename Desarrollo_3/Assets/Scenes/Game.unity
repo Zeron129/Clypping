@@ -3143,7 +3143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameO00: {fileID: 1106609376604904, guid: ae9c3d468ce98db4f9826faaf8d1454a, type: 2}
-  GameO01: {fileID: 1522695833793910, guid: 641bf22118cb19448a37738f7eed09cb, type: 2}
+  Background: {fileID: 1522695833793910, guid: 641bf22118cb19448a37738f7eed09cb, type: 2}
+  BackgroundOffset: {x: 10, y: 0, z: 0}
   PlayerTransform: {fileID: 929956721}
   Parent: {fileID: 933898603}
 --- !u!1 &936328654

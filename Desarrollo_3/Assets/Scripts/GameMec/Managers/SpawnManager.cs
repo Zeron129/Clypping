@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour {
     [SerializeField] private GameObject GameO00;
-    [SerializeField] private GameObject GameO01;
+    [SerializeField] private GameObject Background;
+    [SerializeField] private Vector3 BackgroundOffset;
     [SerializeField] Transform PlayerTransform;
     [SerializeField] GameObject Parent;
     private float spawnY00 = 0.0f;
@@ -41,11 +42,11 @@ public class SpawnManager : MonoBehaviour {
     }
 
     private void SimpleSpawn() {
-        GameObject GO = Instantiate(GameO01);
+        GameObject GO = Instantiate(Background);
         GO.transform.SetParent(Parent.transform);
 
-        GO.transform.position = new Vector3(0, Vector3.up.y * spawnY01, 0);
-        spawnY01 += GameO01.GetComponent<Renderer>().bounds.size.y-1;
+        GO.transform.position = new Vector3(0, Vector3.up.y * spawnY01, 0)+BackgroundOffset;
+        spawnY01 += Background.GetComponent<Renderer>().bounds.size.y-1;
 
     }
 }
