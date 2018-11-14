@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour {
     int _highscore = 0;
     bool _Mute = false;
     string[] _difficultyIndex = { "Easy", "Normal", "Hard" , "Infinite"};
-    string _difficultyLevel = "Infinite";
-    int _lastIndexValue = 3;
+    string _difficultyLevel = "Normal";
+    int _lastIndexValue = 1;
 
     private GameObject managerGameObject;
 
