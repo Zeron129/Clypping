@@ -47,7 +47,6 @@ public class WordManager : MonoBehaviour {
             }
         }
         if (hasActiveWord && activeWord.WordTyped()) {
-            pointsManager.SumarCantidadDePalabras();
             levelManager.RestablecerEnergia();
             hasActiveWord = false;
             words.Remove(activeWord);

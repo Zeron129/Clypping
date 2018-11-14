@@ -21,7 +21,10 @@ public class OptionFunctions : MonoBehaviour {
 
     public void setQuality(int QualityIndex) {
         QualitySettings.SetQualityLevel(QualityIndex);
+        Debug.Log("Dificulty: " + gameManager.getDifficultyLevel());
     }
+
+    
 
     public void FullscreenChange(bool fullscreen) {
         Screen.fullScreen=fullscreen;

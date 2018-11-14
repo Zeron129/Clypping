@@ -1,14 +1,12 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
     int _highscore = 0;
     bool _Mute = false;
+    string[] _difficultyIndex = { "Easy", "Normal", "Hard" , "Infinite"};
+    string _difficultyLevel = "Infinite";
+    int _lastIndexValue = 3;
 
     private GameObject managerGameObject;
 
@@ -27,9 +25,25 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void setDifficultyLevel(int dificultyIndex) {
+        _difficultyLevel = _difficultyIndex[dificultyIndex];
+    }
+
+    public string getDifficultyLevel(){
+        return _difficultyLevel;
+    }
+
     public void UpdateHighscore(int score) {
         if (_highscore < score)
             _highscore = score;
+    }
+
+    public void setLastGetValue(int newIndexValue) {
+        _lastIndexValue = newIndexValue;
+    }
+
+    public int getLastGetValue() {
+        return _lastIndexValue;
     }
 
     public bool GetMuteStatus() {
@@ -38,5 +52,9 @@ public class GameManager : MonoBehaviour {
 
     public void SetMuteStatus(bool mute) {
         _Mute = mute;
+    }
+
+    void Update(){
+        Debug.Log("Dificulty: " + getDifficultyLevel());
     }
 }

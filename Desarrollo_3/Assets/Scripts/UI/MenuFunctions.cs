@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +11,7 @@ public class MenuFunctions : MonoBehaviour {
     [SerializeField] Text progressText;
     [SerializeField] Text TitleText;
     [SerializeField] Text VersionText;
+    [SerializeField] Dropdown DifficultyDropDown;
 
     [SerializeField] AudioMixer Master;
     [SerializeField] AudioSource Music;
@@ -26,6 +26,11 @@ public class MenuFunctions : MonoBehaviour {
             VersionText.text = Application.productName + "_V." + Application.version;
         }
         Music.mute = gameManager.GetMuteStatus();
+    }
+
+    void Start(){
+        if(DifficultyDropDown!=null)
+            DifficultyDropDown.value = gameManager.getLastGetValue();
     }
 
     public void SetPause(bool pause)
@@ -58,6 +63,11 @@ public class MenuFunctions : MonoBehaviour {
 
     public void SetVolume(float volume){
         Master.SetFloat("MasterVolume", volume);
+    }
+
+    public void SetDifficulty(int DifficultyIndex){
+        gameManager.setDifficultyLevel(DifficultyIndex);
+        gameManager.setLastGetValue(DifficultyIndex);
     }
 
     public void SetMute(bool mute)

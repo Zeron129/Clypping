@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
@@ -12,8 +9,8 @@ public class LevelManager : MonoBehaviour {
 
 
     float _maxEnergy = 100;
-    float _energyDrainVelocity = 10;
-    float _restaPorError = 30;
+    float _energyDrainVelocity = 8;
+    float _restaPorError = 10;
     float _energy = 100;
     bool _pauseIsActive = false;
     GameObject _victoryScreen;
@@ -37,7 +34,6 @@ public class LevelManager : MonoBehaviour {
 	
 	void Update () {
         StateMachine();
-        //MainGameLoop();
     }
 
     public void RestarEnergiaPorError(){
@@ -85,9 +81,6 @@ public class LevelManager : MonoBehaviour {
         _puntosText.text = pointsManager.GetPuntaje().ToString() + "/" + pointsManager.GetPuntajeParaGanar().ToString();
         if (!_pauseIsActive)
             _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
-
-        Debug.Log("pause: "+_pauseIsActive);
-
     }
 
     public void ActualzarLevelManager(float MaxEnergy, float EnergyDrainVelocity, float RestaPorError){

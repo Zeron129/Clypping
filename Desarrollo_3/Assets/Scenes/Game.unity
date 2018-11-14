@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2074,7 +2074,7 @@ RectTransform:
   - {fileID: 1587055498}
   - {fileID: 606219742}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4016,6 +4016,7 @@ MonoBehaviour:
   progressText: {fileID: 2026507211}
   TitleText: {fileID: 0}
   VersionText: {fileID: 0}
+  DifficultyDropDown: {fileID: 0}
   Master: {fileID: 24100000, guid: 904432631715a454796efd1d7a47a4f1, type: 2}
   Music: {fileID: 700034711}
   levelManager: {fileID: 1372515247}
@@ -4201,7 +4202,7 @@ Transform:
   m_LocalScale: {x: 11.012, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273528856
 GameObject:
@@ -4263,7 +4264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314424009
 GameObject:
@@ -7011,12 +7012,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsManager: {fileID: 1496780419}
   levelManager: {fileID: 1372515247}
+  gameManager: {fileID: 1902901349}
   _puntajePorLetra: 10
-  _puntajePorPalabra: 0
   _puntajeParaGanar: 1000
   _maxEnergy: 100
-  _energyDrainVelocity: 5
-  _restaPorError: 10
+  _energyDrainVelocityEasy: 4
+  _energyDrainVelocityNormal: 8
+  _energyDrainVelocityHard: 12
+  _restaPorErrorEasy: 5
+  _restaPorErrorNormal: 10
+  _restaPorErrorHard: 20
   _currentEnergyBar: {fileID: 2071414438}
   _victoryScreen: {fileID: 1587055497}
   _defeatScreen: {fileID: 606219741}

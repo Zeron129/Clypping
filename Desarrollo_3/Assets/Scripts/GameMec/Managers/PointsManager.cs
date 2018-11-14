@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PointsManager : MonoBehaviour {
 
     public static PointsManager instance = null;
 
     int _puntajePorLetra;
-    int _puntajePorPalabra;
     int _puntajeParaGanar;
 
     int _puntaje = 0;
@@ -23,9 +20,8 @@ public class PointsManager : MonoBehaviour {
         _canidadPalabras = 0;
     }
 
-    public void ActualzarPuntajes(int PuntajePorLetra, int PuntajePorPalabra, int PuntajeParaGanar) {
+    public void ActualzarPuntajes(int PuntajePorLetra, int PuntajeParaGanar) {
         _puntajePorLetra= PuntajePorLetra;
-        _puntajePorPalabra= PuntajePorPalabra;
         _puntajeParaGanar= PuntajeParaGanar;
     }
 
@@ -45,13 +41,8 @@ public class PointsManager : MonoBehaviour {
         _puntaje += _puntajePorLetra;
     }
 
-    public void SumarCantidadDePalabras(){
-        _canidadPalabras += 1;
-        _puntaje += _puntajePorPalabra;
-    }
-
     public bool PuntajeParaAanarAlcanzado(){
-        if (_puntaje > _puntajeParaGanar) return true;
+        if (_puntaje > _puntajeParaGanar && _puntajeParaGanar >= 0) return true;
         else return false;
     }
 }
