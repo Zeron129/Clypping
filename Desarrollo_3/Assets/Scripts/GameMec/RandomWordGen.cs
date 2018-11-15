@@ -56,14 +56,14 @@ public class RandomWordGen : MonoBehaviour {
     public static string GetRandomWord () {
         if (List1)
         {
-            Debug.Log("Hay " + words.Count + " palabras");
+            //Debug.Log("Hay " + words.Count + " palabras");
             int randomIndex = Random.Range(0, words.Count);
             randomWord = words[randomIndex];
             auxwords.Add(randomWord);
             words.Remove(randomWord);
         }
         else {
-            Debug.Log("Hay " + auxwords.Count + " palabras");
+            //Debug.Log("Hay " + auxwords.Count + " palabras");
             int randomIndex = Random.Range(0, auxwords.Count);
             randomWord = auxwords[randomIndex];
             words.Add(randomWord);

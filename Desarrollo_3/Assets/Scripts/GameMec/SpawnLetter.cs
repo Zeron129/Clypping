@@ -16,13 +16,13 @@ public class SpawnLetter : MonoBehaviour {
     private void Start()
     {
         managertest = Object.FindObjectOfType<WordManager>();
-        if (managertest)
+       /* if (managertest)
         {
             Debug.Log("se encontro wordmanager");
         }
         else {
             Debug.Log("Wordmanager nop encontrado");
-        }
+        }*/
     }
     public void MakeSprite(string MyStrg) {
         
@@ -68,7 +68,7 @@ public class SpawnLetter : MonoBehaviour {
     {
         
         if(collision.tag == "ragdoll") {
-            Debug.Log("detecto ragdoll");
+            //Debug.Log("detecto ragdoll");
             ragdoll = collision.GetComponent<RagdollControl>();
         }
             
@@ -98,7 +98,7 @@ public class SpawnLetter : MonoBehaviour {
                 
                 }
                 else {
-                    Debug.Log("no funcionas");
+                    //Debug.Log("no funcionas");
                 }
             }
         }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - stones
   - ragdoll
+  - gameManager
   layers:
   - Default
   - TransparentFX

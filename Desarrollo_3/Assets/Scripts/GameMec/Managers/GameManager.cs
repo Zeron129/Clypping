@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour {
     int _lastIndexValue = 1;
 
     private GameObject managerGameObject;
+    public static GameManager instance = null;
 
-    private static GameManager _instance;
+    /*private static GameManager _instance;
     public static GameManager Instance {
         get {
             if(_instance == null) {
@@ -19,10 +20,14 @@ public class GameManager : MonoBehaviour {
             }
             return _instance;
         }
-    }
+    }*/
 
     private void Awake(){
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void setDifficultyLevel(int dificultyIndex) {

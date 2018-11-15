@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -6,18 +7,20 @@ using UnityEngine.Audio;
 
 public class MenuFunctions : MonoBehaviour {
 
-    [SerializeField] GameObject loadingscreen;
+    [SerializeField] GameObject loadingScreen;
     [SerializeField] Slider slider;
     [SerializeField] Text progressText;
     [SerializeField] Text TitleText;
     [SerializeField] Text VersionText;
     [SerializeField] Dropdown DifficultyDropDown;
 
+    //public GameObject lalaland;
+    
     [SerializeField] AudioMixer Master;
     [SerializeField] AudioSource Music;
 
     [SerializeField] LevelManager levelManager;
-    [SerializeField] GameManager gameManager;
+    public GameManager gameManager;
 
 
     void Awake(){
@@ -31,7 +34,10 @@ public class MenuFunctions : MonoBehaviour {
     void Start(){
         if(DifficultyDropDown!=null)
             DifficultyDropDown.value = gameManager.getLastGetValue();
+        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
+        //lalaland = GameObject.Find("prueba");
     }
+
 
     public void SetPause(bool pause)
     {
@@ -46,7 +52,7 @@ public class MenuFunctions : MonoBehaviour {
     IEnumerator LoadAsynchnously(int sceneIndex){
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        loadingscreen.SetActive(true);
+        loadingScreen.SetActive(true);
 
         while (!operation.isDone){
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
@@ -68,6 +74,7 @@ public class MenuFunctions : MonoBehaviour {
     public void SetDifficulty(int DifficultyIndex){
         gameManager.setDifficultyLevel(DifficultyIndex);
         gameManager.setLastGetValue(DifficultyIndex);
+        Debug.Log("Dificulty change to: " + gameManager.getDifficultyLevel());
     }
 
     public void SetMute(bool mute)

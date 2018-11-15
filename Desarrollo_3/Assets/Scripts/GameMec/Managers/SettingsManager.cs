@@ -7,7 +7,7 @@ public class SettingsManager : MonoBehaviour {
 
     [SerializeField] PointsManager pointsManager;
     [SerializeField] LevelManager levelManager;
-    [SerializeField] GameManager gameManager;
+    GameManager gameManager;
 
     //puntajes
     [SerializeField] int _puntajePorLetra;
@@ -35,6 +35,7 @@ public class SettingsManager : MonoBehaviour {
     }
 
     void Start () {
+        gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
         pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajeParaGanar);
         UpdateLevelManagerData();
         levelManager.ActualzarUI(_currentEnergyBar, _PuntosText, _puntosfinalVText, _puntosfinalDText, _victoryScreen, _defeatScreen, _botones);

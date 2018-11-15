@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1676,16 +1676,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a447ff5a128ed4cb2dac68f8d3b658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingscreen: {fileID: 1025867364}
+  loadingScreen: {fileID: 1025867364}
   slider: {fileID: 299962334}
   progressText: {fileID: 791192226}
   TitleText: {fileID: 1120249608}
   VersionText: {fileID: 464582832}
   DifficultyDropDown: {fileID: 1225670429}
+  lalaland: {fileID: 0}
   Master: {fileID: 24100000, guid: 904432631715a454796efd1d7a47a4f1, type: 2}
   Music: {fileID: 1110530644}
   levelManager: {fileID: 0}
-  gameManager: {fileID: 1467447857}
+  gameManager: {fileID: 0}
 --- !u!1 &562950158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,6 +2232,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609176838}
   m_CullTransparentMesh: 0
+--- !u!1 &611249581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611249582}
+  m_Layer: 0
+  m_Name: prueba
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &611249582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611249581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 517.3279, y: 427.90378, z: 7.138642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621894436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6218,7 @@ GameObject:
   - component: {fileID: 1467447857}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: gameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
