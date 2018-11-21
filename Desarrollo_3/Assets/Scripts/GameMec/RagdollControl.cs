@@ -49,16 +49,3 @@ public class RagdollControl : MonoBehaviour {
     }
     
 }
-
-/*
-if(collision.tag == "ragdoll") {
-            foreach (char letter in Input.inputString)
-            {
-                Debug.Log(letter);
-                wordManager.TypeLetter(letter);
-            }
-
-            Vector3 lerpedpos = Vector3.Lerp(LeftHand.position, collision.transform.position, smoothfloat);
-LeftHand.position =lerpedpos;
-       
-        }*/

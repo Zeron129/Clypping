@@ -54,5 +54,5 @@ MonoBehaviour:
   center: {x: 0, y: 0, z: 0}
   size: {x: 10, y: 32, z: 10}
   prefab: {fileID: 1391671524720384, guid: c21e42a269e56ab4296fda640bf1d078, type: 2}
-  ObjMin: 10
-  ObjMax: 15
+  MinObj: 10
+  MaxObj: 20

@@ -10,16 +10,16 @@ public class LevelManager : MonoBehaviour {
 
     float _maxEnergy = 100;
     float _energyDrainVelocity = 8;
-    float _restaPorError = 10;
+    float _errorPenalty = 10;
     float _energy = 100;
     bool _pauseIsActive = false;
     GameObject _victoryScreen;
     GameObject _defeatScreen;
-    GameObject _botones;
+    GameObject _buttons;
     Image _currentEnergyBar;
-    Text _puntosText;
-    Text _puntosfinalVText;
-    Text _puntosfinalDText;
+    Text _scoreText;
+    Text _finalScoreVText;
+    Text _finalScoreDText;
 
     void Awake(){
         if (instance == null) instance = this;
@@ -28,19 +28,19 @@ public class LevelManager : MonoBehaviour {
     }
 
     void Start () {
-        pointsManager.InicilizarPuntajes();
-        RestablecerEnergia();
+        pointsManager.InitScore();
+        RestoreEergy();
     }
 	
 	void Update () {
         StateMachine();
     }
 
-    public void RestarEnergiaPorError(){
-        _energy -= _restaPorError;
+    public void SubstractEnergyError(){
+        _energy -= _errorPenalty;
     }
 
-    public void RestablecerEnergia(){
+    public void RestoreEergy(){
         _energy = _maxEnergy;
     }
 
@@ -55,48 +55,48 @@ public class LevelManager : MonoBehaviour {
 
     //verifica la condicion de victoria/derrota
     void StateMachine(){
-        if (pointsManager.PuntajeParaAanarAlcanzado()) Win();
+        if (pointsManager.ScoreForWinningReached()) Win();
         if (_energy <= 0) Lose();
         MainGameLoop();
     }
 
     private void Win(){
         _victoryScreen.SetActive(true);
-        _botones.SetActive(false);
+        _buttons.SetActive(false);
         _pauseIsActive = true;
-        _puntosfinalVText.text = "Puntos: " + pointsManager.GetPuntaje().ToString();
+        _finalScoreVText.text = "Puntos: " + pointsManager.GetScore().ToString();
     }
 
     private void Lose(){
         _defeatScreen.SetActive(true);
-        _botones.SetActive(false);
+        _buttons.SetActive(false);
         _pauseIsActive = true;
-        _puntosfinalDText.text = "Puntos: " + pointsManager.GetPuntaje().ToString();
+        _finalScoreDText.text = "Puntos: " + pointsManager.GetScore().ToString();
     }
 
     private void MainGameLoop()
     {
         float ratio = _energy / _maxEnergy;
         _currentEnergyBar.fillAmount = ratio;
-        _puntosText.text = pointsManager.GetPuntaje().ToString() + "/" + pointsManager.GetPuntajeParaGanar().ToString();
+        _scoreText.text = pointsManager.GetScore().ToString() + "/" + pointsManager.GetScoreForWinning().ToString();
         if (!_pauseIsActive)
             _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
     }
 
-    public void ActualzarLevelManager(float MaxEnergy, float EnergyDrainVelocity, float RestaPorError){
+    public void UpdateLevelManager(float MaxEnergy, float EnergyDrainVelocity, float SubstractforError){
         _maxEnergy = MaxEnergy;
         _energyDrainVelocity = EnergyDrainVelocity;
-        _restaPorError = RestaPorError;
+        _errorPenalty = SubstractforError;
     }
 
-    public void ActualzarUI(Image CurrentEnergyBar, Text PuntosText, Text PuntosFinalVText, Text PuntosFinalDText, GameObject VictoryScreen,
-                            GameObject DefeatScreen, GameObject Botones){
+    public void ActualzarUI(Image CurrentEnergyBar, Text ScoreText, Text FinalScoreVText, Text FinalScoreDText, GameObject VictoryScreen,
+                            GameObject DefeatScreen, GameObject Buttons){
         _currentEnergyBar = CurrentEnergyBar;
-        _puntosText = PuntosText;
-        _puntosfinalVText = PuntosFinalVText;
-        _puntosfinalDText = PuntosFinalDText;
+        _scoreText = ScoreText;
+        _finalScoreVText = FinalScoreVText;
+        _finalScoreDText = FinalScoreDText;
         _victoryScreen = VictoryScreen;
         _defeatScreen = DefeatScreen;
-        _botones = Botones;
+        _buttons = Buttons;
     }
 }

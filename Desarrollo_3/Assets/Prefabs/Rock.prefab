@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetx: -3
-  Letra: {fileID: 1350378572601198, guid: 469c9fd415fe4f541b8e42b1eab79877, type: 2}
+  Letter: {fileID: 1350378572601198, guid: 469c9fd415fe4f541b8e42b1eab79877, type: 2}
   Sprites:
   - {fileID: 21300000, guid: 6f43556d496a9ba49919a6e9d50a4b9d, type: 3}
   - {fileID: 21300002, guid: 6f43556d496a9ba49919a6e9d50a4b9d, type: 3}

@@ -4938,7 +4938,6 @@ MonoBehaviour:
   TitleText: {fileID: 0}
   VersionText: {fileID: 0}
   DifficultyDropDown: {fileID: 0}
-  lalaland: {fileID: 0}
   Master: {fileID: 24100000, guid: 904432631715a454796efd1d7a47a4f1, type: 2}
   Music: {fileID: 700034711}
   levelManager: {fileID: 1372515247}
@@ -8919,19 +8918,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsManager: {fileID: 1496780419}
   levelManager: {fileID: 1372515247}
-  _puntajePorLetra: 10
-  _puntajeParaGanar: 1000
+  _ScoreLetter: 10
+  _WinningScore: 500
   _maxEnergy: 100
   _energyDrainVelocityEasy: 4
   _energyDrainVelocityNormal: 8
   _energyDrainVelocityHard: 12
-  _restaPorErrorEasy: 5
-  _restaPorErrorNormal: 10
-  _restaPorErrorHard: 20
+  _SubstractForErrorEasy: 5
+  _SubstractForErrorNormal: 10
+  _SubstractForErrorHard: 20
   _currentEnergyBar: {fileID: 2071414438}
   _victoryScreen: {fileID: 1587055497}
   _defeatScreen: {fileID: 606219741}
-  _botones: {fileID: 990608483}
-  _PuntosText: {fileID: 374230915}
-  _puntosfinalVText: {fileID: 748985526}
-  _puntosfinalDText: {fileID: 1522755462}
+  _buttons: {fileID: 990608483}
+  ScoreText: {fileID: 374230915}
+  _FinalScoreVText: {fileID: 1522755462}
+  _FinalScoreDText: {fileID: 748985526}

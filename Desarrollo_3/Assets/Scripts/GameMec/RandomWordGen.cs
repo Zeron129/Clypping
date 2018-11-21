@@ -45,13 +45,7 @@ public class RandomWordGen : MonoBehaviour {
     private static string randomWord;
     private static bool List1=true;
 
-    private static void Start()
-    {/*
-        for (int i = 0; i < wordList.Length; i++)
-        {
-            words.Add(wordList[i]);
-        }*/
-    }
+   
 
     public static string GetRandomWord () {
         if (List1)

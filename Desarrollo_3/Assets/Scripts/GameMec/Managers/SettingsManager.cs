@@ -10,24 +10,24 @@ public class SettingsManager : MonoBehaviour {
     GameManager gameManager;
 
     //puntajes
-    [SerializeField] int _puntajePorLetra;
-    [SerializeField] int _puntajeParaGanar;
+    [SerializeField] int _ScoreLetter;
+    [SerializeField] int _WinningScore;
     //datos levelManager
     [SerializeField] float _maxEnergy;
     [SerializeField] float _energyDrainVelocityEasy;
     [SerializeField] float _energyDrainVelocityNormal;
     [SerializeField] float _energyDrainVelocityHard;
-    [SerializeField] float _restaPorErrorEasy;
-    [SerializeField] float _restaPorErrorNormal; 
-    [SerializeField] float _restaPorErrorHard;
+    [SerializeField] float _SubstractForErrorEasy;
+    [SerializeField] float _SubstractForErrorNormal; 
+    [SerializeField] float _SubstractForErrorHard;
     //UI
     [SerializeField] Image _currentEnergyBar;
     [SerializeField] GameObject _victoryScreen;
     [SerializeField] GameObject _defeatScreen;
-    [SerializeField] GameObject _botones;
-    [SerializeField] Text _PuntosText;
-    [SerializeField] Text _puntosfinalVText;
-    [SerializeField] Text _puntosfinalDText;
+    [SerializeField] GameObject _buttons;
+    [SerializeField] Text ScoreText;
+    [SerializeField] Text _FinalScoreVText;
+    [SerializeField] Text _FinalScoreDText;
 
     void Awake() {
         if (instance == null) instance = this;
@@ -36,13 +36,13 @@ public class SettingsManager : MonoBehaviour {
 
     void Start () {
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
-        pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajeParaGanar);
+        pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
         UpdateLevelManagerData();
-        levelManager.ActualzarUI(_currentEnergyBar, _PuntosText, _puntosfinalVText, _puntosfinalDText, _victoryScreen, _defeatScreen, _botones);
+        levelManager.ActualzarUI(_currentEnergyBar, ScoreText, _FinalScoreVText, _FinalScoreDText, _victoryScreen, _defeatScreen, _buttons);
 	}
 	
 	void Update () {
-        pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajeParaGanar);
+        pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
         UpdateLevelManagerData();
     }
 
@@ -50,20 +50,20 @@ public class SettingsManager : MonoBehaviour {
         
         switch (gameManager.getDifficultyLevel()){
             case "Easy":
-                pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajeParaGanar);
-                levelManager.ActualzarLevelManager(_maxEnergy, _energyDrainVelocityEasy, _restaPorErrorEasy);
+                pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityEasy, _SubstractForErrorEasy);
                 break;
             case "Normal":
-                pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajeParaGanar);
-                levelManager.ActualzarLevelManager(_maxEnergy, _energyDrainVelocityNormal, _restaPorErrorNormal);
+                pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityNormal, _SubstractForErrorNormal);
                 break;
             case "Hard":
-                pointsManager.ActualzarPuntajes(_puntajePorLetra, _puntajeParaGanar);
-                levelManager.ActualzarLevelManager(_maxEnergy, _energyDrainVelocityHard, _restaPorErrorHard);
+                pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityHard, _SubstractForErrorHard);
                 break;
             case "Infinite":
-                pointsManager.ActualzarPuntajes(_puntajePorLetra, -1);
-                levelManager.ActualzarLevelManager(_maxEnergy, _energyDrainVelocityHard, _restaPorErrorHard);
+                pointsManager.UpdateScore(_ScoreLetter, -1);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityHard, _SubstractForErrorHard);
                 break;
         }
 

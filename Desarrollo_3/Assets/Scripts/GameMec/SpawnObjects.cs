@@ -6,8 +6,8 @@ public class SpawnObjects : MonoBehaviour {
     [SerializeField] private Vector3 center;
     [SerializeField] private Vector3 size;
     [SerializeField] private GameObject prefab;
-    [SerializeField] private int ObjMin;
-    [SerializeField] private int ObjMax;
+    [SerializeField] private int MinObj;
+    [SerializeField] private int MaxObj;
     // Use this for initialization
     private void Awake()
     {
@@ -16,7 +16,7 @@ public class SpawnObjects : MonoBehaviour {
     }
     private void Start()
     {
-        for (int i = 0; i < Random.Range(ObjMin, ObjMax); i++)
+        for (int i = 0; i < Random.Range(MinObj, MaxObj); i++)
         {
             spawmRocks(i * 3);
         }

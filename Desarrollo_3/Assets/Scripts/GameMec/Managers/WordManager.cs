@@ -29,10 +29,10 @@ public class WordManager : MonoBehaviour {
             if (activeWord.getNextLetter() == Letter)
             {
                 activeWord.TypedLetter();
-                pointsManager.SumarPuntaje();
+                pointsManager.AddScore();
             }
             else
-                levelManager.RestarEnergiaPorError();
+                levelManager.SubstractEnergyError();
         }
         else {
             foreach (Word word in words) {
@@ -40,14 +40,14 @@ public class WordManager : MonoBehaviour {
                     activeWord = word;
                     hasActiveWord = true;
                     word.TypedLetter();
-                    pointsManager.SumarPuntaje();
+                    pointsManager.AddScore();
                     break;
 
                 }
             }
         }
         if (hasActiveWord && activeWord.WordTyped()) {
-            levelManager.RestablecerEnergia();
+            levelManager.RestoreEergy();
             hasActiveWord = false;
             words.Remove(activeWord);
             Letter = '0';
