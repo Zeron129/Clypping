@@ -13,9 +13,8 @@ public class MenuFunctions : MonoBehaviour {
     [SerializeField] Text TitleText;
     [SerializeField] Text VersionText;
     [SerializeField] Dropdown DifficultyDropDown;
+    [SerializeField] Text[] Highscores;
 
-    //public GameObject lalaland;
-    
     [SerializeField] AudioMixer Master;
     [SerializeField] AudioSource Music;
 
@@ -89,5 +88,17 @@ public class MenuFunctions : MonoBehaviour {
 
     public void FullscreenChange(bool fullscreen){
         Screen.fullScreen = fullscreen;
+    }
+
+    public void UpdateHighScores() {
+        int[] highscores = new int[5];
+        string[] highscorenames = new string[5];
+
+        for (int i = 0; i < 5; i++) {
+            highscores[i] = gameManager.getHighScoreIntI(i);
+            highscorenames[i] = gameManager.getHighScoreStringI(i);
+        }
+        for (int i = 0; i < 5; i++)
+            Highscores[i].text = "[" + i+1 + "]" + highscorenames[1] + ": " + highscores;
     }
 }

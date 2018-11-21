@@ -2,25 +2,15 @@
 
 public class GameManager : MonoBehaviour {
 
-    int _highscore = 0;
     bool _Mute = false;
-    string[] _difficultyIndex = { "Easy", "Normal", "Hard" , "Infinite"};
+    string[] _difficultyIndex = { "Easy", "Normal", "Hard", "Infinite" };
     string _difficultyLevel = "Normal";
     int _lastIndexValue = 1;
+    int[] _HighScore = new int[5] { 0, 0, 0, 0, 0 };
+    string[] _HighScoreNames = new string[5] { "", "", "", "", "" };
 
     private GameObject managerGameObject;
     public static GameManager instance = null;
-
-    /*private static GameManager _instance;
-    public static GameManager Instance {
-        get {
-            if(_instance == null) {
-                _instance = new GameManager();
-                _instance.managerGameObject = new GameObject("_gameManager");
-            }
-            return _instance;
-        }
-    }*/
 
     private void Awake(){
         if (instance == null)
@@ -30,6 +20,8 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+
+
     public void setDifficultyLevel(int dificultyIndex) {
         _difficultyLevel = _difficultyIndex[dificultyIndex];
     }
@@ -38,9 +30,34 @@ public class GameManager : MonoBehaviour {
         return _difficultyLevel;
     }
 
-    public void UpdateHighscore(int score) {
-        if (_highscore < score)
-            _highscore = score;
+    public void UploadScore(int score, string name) {
+        for (int i = 0; i < 5; i++) {
+            if(score > _HighScore[i]) {
+                int AuxInt = 0;
+                string AuxString = "";
+                AuxInt = _HighScore[i];
+                AuxString = _HighScoreNames[i];
+                _HighScore[i] = score;
+                _HighScoreNames[i] = name;
+                score = AuxInt;
+                name = AuxString;
+                for (int e = i + 1; e < 5; e++){
+                    AuxInt = _HighScore[e];
+                    AuxString = _HighScoreNames[e];
+                    _HighScore[e] = score;
+                    _HighScoreNames[e] = name;
+                    score = AuxInt;
+                    name = AuxString;
+                }
+            }
+        }
+    }
+
+    public int getHighScoreIntI(int i) {
+        return _HighScore[i];
+    }
+    public string getHighScoreStringI(int i){
+        return _HighScoreNames[i];
     }
 
     public void setLastGetValue(int newIndexValue) {
