@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1682,11 +1682,10 @@ MonoBehaviour:
   TitleText: {fileID: 1120249608}
   VersionText: {fileID: 464582832}
   DifficultyDropDown: {fileID: 1225670429}
-  lalaland: {fileID: 0}
   Master: {fileID: 24100000, guid: 904432631715a454796efd1d7a47a4f1, type: 2}
   Music: {fileID: 1110530644}
   levelManager: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1467447857}
 --- !u!1 &562950158
 GameObject:
   m_ObjectHideFlags: 0
