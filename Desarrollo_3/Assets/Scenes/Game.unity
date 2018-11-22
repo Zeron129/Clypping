@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 250499512}
   - component: {fileID: 250499511}
   m_Layer: 5
-  m_Name: DificultadText
+  m_Name: DificultadVText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3127,7 +3127,7 @@ GameObject:
   - component: {fileID: 740618541}
   - component: {fileID: 740618540}
   m_Layer: 5
-  m_Name: DificultadText
+  m_Name: DificultadDText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3277,7 +3277,7 @@ GameObject:
   - component: {fileID: 748985527}
   - component: {fileID: 748985526}
   m_Layer: 5
-  m_Name: PuntajeText
+  m_Name: PuntajeVText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4938,6 +4938,7 @@ MonoBehaviour:
   TitleText: {fileID: 0}
   VersionText: {fileID: 0}
   DifficultyDropDown: {fileID: 0}
+  Highscores: []
   Master: {fileID: 24100000, guid: 904432631715a454796efd1d7a47a4f1, type: 2}
   Music: {fileID: 700034711}
   levelManager: {fileID: 1372515247}
@@ -5636,6 +5637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsManager: {fileID: 1496780419}
+  gameManager: {fileID: 1902901349}
 --- !u!4 &1372515248
 Transform:
   m_ObjectHideFlags: 0
@@ -6115,7 +6117,7 @@ GameObject:
   - component: {fileID: 1522755463}
   - component: {fileID: 1522755462}
   m_Layer: 5
-  m_Name: PuntajeText
+  m_Name: PuntajeDText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8932,5 +8934,7 @@ MonoBehaviour:
   _defeatScreen: {fileID: 606219741}
   _buttons: {fileID: 990608483}
   ScoreText: {fileID: 374230915}
-  _FinalScoreVText: {fileID: 1522755462}
-  _FinalScoreDText: {fileID: 748985526}
+  _FinalScoreVText: {fileID: 748985526}
+  _FinalScoreDText: {fileID: 1522755462}
+  _DifficultyVText: {fileID: 250499511}
+  _DifficultyDText: {fileID: 740618540}

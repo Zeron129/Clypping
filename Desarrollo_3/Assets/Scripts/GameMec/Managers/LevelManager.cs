@@ -1,11 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class LevelManager : MonoBehaviour {
 
     public static LevelManager instance = null;
 
     [SerializeField] PointsManager pointsManager;
+    [SerializeField] GameManager gameManager;
 
 
     float _maxEnergy = 100;
@@ -13,6 +18,7 @@ public class LevelManager : MonoBehaviour {
     float _errorPenalty = 10;
     float _energy = 100;
     bool _pauseIsActive = false;
+    string _difficulty = "Normal";
     GameObject _victoryScreen;
     GameObject _defeatScreen;
     GameObject _buttons;
@@ -20,6 +26,8 @@ public class LevelManager : MonoBehaviour {
     Text _scoreText;
     Text _finalScoreVText;
     Text _finalScoreDText;
+    Text _DifficultyVText;
+    Text _DifficultyDText;
 
     void Awake(){
         if (instance == null) instance = this;
@@ -65,6 +73,10 @@ public class LevelManager : MonoBehaviour {
         _buttons.SetActive(false);
         _pauseIsActive = true;
         _finalScoreVText.text = "Puntos: " + pointsManager.GetScore().ToString();
+        _DifficultyVText.text = gameManager.getDifficultyLevel();
+        if (_difficulty == "Infinite") {
+            gameManager.UploadScore(pointsManager.GetScore(), "AAA");
+        }
     }
 
     private void Lose(){
@@ -72,10 +84,13 @@ public class LevelManager : MonoBehaviour {
         _buttons.SetActive(false);
         _pauseIsActive = true;
         _finalScoreDText.text = "Puntos: " + pointsManager.GetScore().ToString();
+        _DifficultyDText.text = "Dificultad: " + gameManager.getDifficultyLevel();
+        if (_difficulty == "Infinite"){
+            gameManager.UploadScore(pointsManager.GetScore(), "AAA");
+        }
     }
 
-    private void MainGameLoop()
-    {
+    private void MainGameLoop(){
         float ratio = _energy / _maxEnergy;
         _currentEnergyBar.fillAmount = ratio;
         _scoreText.text = pointsManager.GetScore().ToString() + "/" + pointsManager.GetScoreForWinning().ToString();
@@ -83,14 +98,16 @@ public class LevelManager : MonoBehaviour {
             _energy -= 1f * Time.deltaTime * _energyDrainVelocity;
     }
 
-    public void UpdateLevelManager(float MaxEnergy, float EnergyDrainVelocity, float SubstractforError){
+    public void UpdateLevelManager(float MaxEnergy, float EnergyDrainVelocity, float SubstractforError, string difficulty){
         _maxEnergy = MaxEnergy;
         _energyDrainVelocity = EnergyDrainVelocity;
         _errorPenalty = SubstractforError;
+        _difficulty = difficulty;
     }
 
     public void ActualzarUI(Image CurrentEnergyBar, Text ScoreText, Text FinalScoreVText, Text FinalScoreDText, GameObject VictoryScreen,
-                            GameObject DefeatScreen, GameObject Buttons){
+                            GameObject DefeatScreen, GameObject Buttons, Text DifficultyVText, Text DifficultyDText)
+    {
         _currentEnergyBar = CurrentEnergyBar;
         _scoreText = ScoreText;
         _finalScoreVText = FinalScoreVText;
@@ -98,5 +115,7 @@ public class LevelManager : MonoBehaviour {
         _victoryScreen = VictoryScreen;
         _defeatScreen = DefeatScreen;
         _buttons = Buttons;
+        _DifficultyDText = DifficultyVText;
+        _DifficultyVText = DifficultyDText;
     }
 }

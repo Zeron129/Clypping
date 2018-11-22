@@ -28,6 +28,8 @@ public class SettingsManager : MonoBehaviour {
     [SerializeField] Text ScoreText;
     [SerializeField] Text _FinalScoreVText;
     [SerializeField] Text _FinalScoreDText;
+    [SerializeField] Text _DifficultyVText;
+    [SerializeField] Text _DifficultyDText;
 
     void Awake() {
         if (instance == null) instance = this;
@@ -38,7 +40,8 @@ public class SettingsManager : MonoBehaviour {
         gameManager = GameObject.FindGameObjectWithTag("gameManager").GetComponent<GameManager>();
         pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
         UpdateLevelManagerData();
-        levelManager.ActualzarUI(_currentEnergyBar, ScoreText, _FinalScoreVText, _FinalScoreDText, _victoryScreen, _defeatScreen, _buttons);
+        levelManager.ActualzarUI(_currentEnergyBar, ScoreText, _FinalScoreVText, _FinalScoreDText,
+            _victoryScreen, _defeatScreen, _buttons, _DifficultyVText, _DifficultyDText);
 	}
 	
 	void Update () {
@@ -51,19 +54,19 @@ public class SettingsManager : MonoBehaviour {
         switch (gameManager.getDifficultyLevel()){
             case "Easy":
                 pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
-                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityEasy, _SubstractForErrorEasy);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityEasy, _SubstractForErrorEasy, gameManager.getDifficultyLevel());
                 break;
             case "Normal":
                 pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
-                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityNormal, _SubstractForErrorNormal);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityNormal, _SubstractForErrorNormal, gameManager.getDifficultyLevel());
                 break;
             case "Hard":
                 pointsManager.UpdateScore(_ScoreLetter, _WinningScore);
-                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityHard, _SubstractForErrorHard);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityHard, _SubstractForErrorHard, gameManager.getDifficultyLevel());
                 break;
             case "Infinite":
                 pointsManager.UpdateScore(_ScoreLetter, -1);
-                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityHard, _SubstractForErrorHard);
+                levelManager.UpdateLevelManager(_maxEnergy, _energyDrainVelocityHard, _SubstractForErrorHard, gameManager.getDifficultyLevel());
                 break;
         }
 

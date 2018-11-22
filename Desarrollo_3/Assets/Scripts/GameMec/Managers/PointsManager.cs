@@ -40,7 +40,7 @@ public class PointsManager : MonoBehaviour {
     public void AddScore(){
         _Score += _LetterScore;
     }
-
+    
     public bool ScoreForWinningReached(){
         if (_Score > _ScoreForVictory && _ScoreForVictory >= 0) return true;
         else return false;
