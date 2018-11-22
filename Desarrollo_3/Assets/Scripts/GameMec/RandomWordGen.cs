@@ -1,53 +1,26 @@
 ﻿using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomWordGen : MonoBehaviour {
-    private static List<string> words = new List<string>() {
-        "relato",
-        "cita",
-        "sable",
-        "triple",
-        "borla",
-        "cruel",
-        "cuerdas",
-        "modelar",
-        "volante",
-        "mezquita",
-        "vestuario",
-        "pua",
-        "lugar",
-        "lamer",
-        "adulto",
-        "vida",
-        "ramo",
-        "bisonte",
-        "peca",
-        "pecador",
-        "alumno",
-        "tristeza",
-        "moneda",
-        "cosa",
-        "santo",
-        "dentro",
-        "china",
-        "guante",
-        "frasco",
-        "fin",
-        "film",
-        "secar",
-        "negro",
-        "colgar",
-        "hilo"
+    private  List<string> words = new List<string>();
+    string line;
+    private StreamReader SR;
+    private  List<string> auxwords = new List<string>();
+    private  string randomWord;
+    private  bool List1=true;
 
-    };
-    private static List<string> auxwords = new List<string>();
-    private static string randomWord;
-    private static bool List1=true;
+    private void Start()
+    {
+        SR = new StreamReader(@"C:\Users\Administrador\Desktop\Clypping\Desarrollo_3\Assets\StringsFiles\WORDS.txt");
+        while ((line = SR.ReadLine()) != null) {
+            Debug.Log(line);
+            words.Add(line);
+        }
+    }
 
-   
-
-    public static string GetRandomWord () {
+    public string GetRandomWord () {
         if (List1)
         {
             //Debug.Log("Hay " + words.Count + " palabras");

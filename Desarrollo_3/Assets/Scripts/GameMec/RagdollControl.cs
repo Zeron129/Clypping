@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RagdollControl : MonoBehaviour {
-
+    [SerializeField] RandomWordGen RandomWordGen;
     [SerializeField]  GameObject LeftHand;
     [SerializeField]  GameObject RightHand;
     [SerializeField]  float smoothfloat;

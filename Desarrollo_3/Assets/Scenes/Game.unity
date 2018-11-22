@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4007,6 +4007,7 @@ GameObject:
   - component: {fileID: 936328656}
   - component: {fileID: 936328655}
   - component: {fileID: 936328657}
+  - component: {fileID: 936328658}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -4054,6 +4055,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wordManager: {fileID: 936328655}
   levelManager: {fileID: 1372515247}
+--- !u!114 &936328658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 936328654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c430c8705e7aeb84bba8b660fc3f2a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &971687752
 GameObject:
   m_ObjectHideFlags: 0
@@ -8436,6 +8448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a86492295aecd41a18edca0b8c9936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RandomWordGen: {fileID: 936328658}
   LeftHand: {fileID: 1816624947}
   RightHand: {fileID: 632279784}
   smoothfloat: 0.125
